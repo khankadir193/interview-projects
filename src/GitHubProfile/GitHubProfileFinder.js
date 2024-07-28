@@ -1,5 +1,6 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import './githubProfile.css';
 
 const GitHubProfileFinder = () => {
     const [profileData,setProfileData] = useState();
@@ -15,7 +16,12 @@ const GitHubProfileFinder = () => {
         fetchData();
     },[0]);
     return (
-        <div>{profileData?.name}</div>
+        <div className='profile-container'>
+            <img src={profileData?.avatar_url} alt='gitHub profileImage' />
+            <p>{profileData?.login}</p>
+            <h3>{profileData?.name}</h3>
+            <h3>{profileData?.bio}</h3>
+        </div>
     )
 }
 

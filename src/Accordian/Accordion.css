@@ -1,0 +1,13 @@
+.content{
+    display: flex;
+    justify-content: center;
+    background-color: wheat;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3vw;
+    font-weight: bold;
+    margin: 0;
+    position: relative;
+    /* top: 1vw; */
+    bottom: 2.5vw;
+}

@@ -13,7 +13,7 @@ function App() {
       {/* gihubprofile project */}
       {/* <GitHubProfileFinder /> */}
       {/* <QrGenerator value="7985132148" /> */}
-      <QrReader upiID ='abdulkadirk059@oksbi' />
+      <QrReader upiID ='abdulkadirk059@oksbi' name="Abdul Kadir Khan" amount='100' note='googlePay' />
     </div>
   );
 }

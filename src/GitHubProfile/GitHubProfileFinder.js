@@ -33,10 +33,11 @@ const GitHubProfileFinder = () => {
 
         return (
             <div className='profile-container'>
-                <img src={profileData?.avatar_url} alt='gitHub profileImage' />
-                <p>{profileData?.login}</p>
-                <h3>{profileData?.name}</h3>
-                <h3>{profileData?.bio}</h3>
+                <img src={profileData?.avatar_url && profileData?.avatar_url} alt='gitHub profileImage' />
+                <p>{profileData?.login && profileData?.login}</p>
+                <h3>{profileData?.name && profileData?.name}</h3>
+                <h3>{profileData?.bio && profileData?.bio}</h3>
+                <a href={profileData?.html_url} target='_blank'>viewProfile</a>
                 <input type='text' placeholder='enter your github username' onChange={handleChange} />
                 <button onClick={handleSubmit}>Submit</button>
             </div>

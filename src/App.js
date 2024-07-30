@@ -2,6 +2,7 @@ import './App.css';
 import AccordianComp from './Accordian/AccordianComp';
 import GitHubProfileFinder from './GitHubProfile/GitHubProfileFinder';
 import QrGenerator from './Qr-code-generator/QrGenerator';
+import QrReader from './Qr-code-generator/QrReader';
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       {/* <AccordianComp name="second Accordion comp" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."/> */}
       {/* gihubprofile project */}
       {/* <GitHubProfileFinder /> */}
-      <QrGenerator value="Hello World..!" />
+      {/* <QrGenerator value="7985132148" /> */}
+      <QrReader upiID ='abdulkadirk059@oksbi' />
     </div>
   );
 }

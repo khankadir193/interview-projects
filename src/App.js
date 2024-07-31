@@ -3,6 +3,7 @@ import AccordianComp from './Accordian/AccordianComp';
 import GitHubProfileFinder from './GitHubProfile/GitHubProfileFinder';
 import QrGenerator from './Qr-code-generator/QrGenerator';
 import QrReader from './Qr-code-generator/QrReader';
+import LightDarkMode from './LightToggle/LightDarkMode';
 
 function App() {
   return (
@@ -13,7 +14,9 @@ function App() {
       {/* gihubprofile project */}
       {/* <GitHubProfileFinder /> */}
       {/* <QrGenerator value="7985132148" /> */}
-      <QrReader upiID ='abdulkadirk059@oksbi' name="Abdul Kadir Khan" amount='100' note='googlePay' />
+      {/* <QrReader upiID ='abdulkadirk059@oksbi' name="Abdul Kadir Khan" amount='100' note='googlePay' /> */}
+      {/* light darkMode toggle */}
+      <LightDarkMode />
     </div>
   );
 }

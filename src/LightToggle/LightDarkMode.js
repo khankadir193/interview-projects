@@ -8,8 +8,8 @@ const LightDarkMode = () => {
     };
 
     return (
-        <div style={{backgroundColor: clicked ? 'dark-mode' : 'light-mode'}}>
-            <button onClick={toggleMode}>click</button>
+        <div className={clicked ? 'dark-mode' : 'light-mode'}>
+            <button onClick={toggleMode}>toggleButton</button>
         </div>
     );
 }

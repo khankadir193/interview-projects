@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import './lightDark.css';
 
 const LightDarkMode = () => {
     const [clicked, isClicked] = useState(false);
@@ -7,7 +8,7 @@ const LightDarkMode = () => {
     };
 
     return (
-        <div style={{backgroundColor: clicked ? 'black' : 'white'}}>
+        <div style={{backgroundColor: clicked ? 'dark-mode' : 'light-mode'}}>
             <button onClick={toggleMode}>click</button>
         </div>
     );

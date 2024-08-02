@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-// import './Scroll.css';
+import './Scroll.css';
 
 const ScrollIndicator = () => {
     const [data, setData] = useState([]);
@@ -19,14 +19,18 @@ const ScrollIndicator = () => {
 
     }, [])
     return (
-        <div className='scroll-container'>
-            <h1>title</h1>
-            {data.length > 0 && data.map((item) => {
-                return (
-                    <h3 key={item.id}>{item.title}</h3>
-                );
-            })}
+        <>
+        <div className='scroll-indicator'>
         </div>
+            <div className='scroll-container'>
+                <h1>title</h1>
+                {data.length > 0 && data.map((item) => {
+                    return (
+                        <h3 key={item.id}>{item.title}</h3>
+                    );
+                })}
+            </div>
+        </>
     )
 }
 

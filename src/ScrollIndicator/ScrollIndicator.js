@@ -7,14 +7,14 @@ const ScrollIndicator = () => {
   const [scrollPercentage, setScrollPercentage] = useState(0);
 
   const handleScroll = () => {
-      const height = document.documentElement.scrollHeight;
-      const scrolled = document.documentElement.scrollTop;
-      const progress = (scrolled / height) * 100;
+      const winScroll = document.documentElement.scrollTop;
+      const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const progress = (winScroll / height) * 100;
       const scrollPercentage = Math.round(progress);
       console.log('progress..',progress);
       console.log('scrollPercentage..',scrollPercentage);
-    //   setScrollPercentage(scrollPercentage);
-    setScrollPercentage(progress);
+      setScrollPercentage(scrollPercentage);
+    // setScrollPercentage(progress);
   }
 
   useEffect(() => {

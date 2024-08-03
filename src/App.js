@@ -6,22 +6,26 @@ import QrReader from './Qr-code-generator/QrReader';
 import LightDarkMode from './LightToggle/LightDarkMode';
 import ScrollIndicator from './ScrollIndicator/ScrollIndicator';
 
+
 function App() {
   return (
     <div>
-      {/* accordion component calling */}
+      {/* Render the AccordianComp component */}
       {/* <AccordianComp name="AccordionComponent" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."/> */}
       {/* <AccordianComp name="second Accordion comp" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex, sit amet blandit leo lobortis eget."/> */}
-      {/* gihubprofile project */}
+      {/* Render the GitHubProfileFinder component */}
       {/* <GitHubProfileFinder /> */}
+      {/* Render the QrGenerator component */}
       {/* <QrGenerator value="7985132148" /> */}
+      {/* Render the QrReader component */}
       {/* <QrReader upiID ='abdulkadirk059@oksbi' name="Abdul Kadir Khan" amount='100' note='googlePay' /> */}
-      {/* light darkMode toggle */}
+      {/* Render the LightDarkMode component */}
       {/* <LightDarkMode /> */}
-      {/* scroll indicator */}
+      {/* Render the ScrollIndicator component */}
       <ScrollIndicator />
     </div>
   );
 }
+
 
 export default App;

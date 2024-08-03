@@ -6,16 +6,19 @@ const ScrollIndicator = () => {
   const [data, setData] = useState([]);
   const [scrollPercentage, setScrollPercentage] = useState(0);
 
-  const handleScroll = () => {
+  const handleScroll = async () => {
+    try {
       const winScroll = document.documentElement.scrollTop;
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const progress = (winScroll / height) * 100;
       const scrollPercentage = Math.round(progress);
-      console.log('progress..',progress);
-      console.log('scrollPercentage..',scrollPercentage);
+      console.log('scrollPercentage..', scrollPercentage);
       setScrollPercentage(scrollPercentage);
-    // setScrollPercentage(progress);
+    } catch (error) {
+      console.error('Error handling scroll:', error);
+    }
   }
+
 
   useEffect(() => {
     document.addEventListener('scroll',handleScroll);

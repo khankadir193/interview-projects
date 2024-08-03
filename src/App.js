@@ -7,6 +7,11 @@ import LightDarkMode from './LightToggle/LightDarkMode';
 import ScrollIndicator from './ScrollIndicator/ScrollIndicator';
 
 
+/**
+ * Renders the main application component.
+ *
+ * @return {JSX.Element} The rendered application component.
+ */
 function App() {
   return (
     <div>

@@ -14,3 +14,23 @@
     z-index: 1;
     margin: 0;
 }
+
+
+/* src/ProgressBar.css */
+.progress-container {
+  width: 100%;
+  background-color: #e0e0df;
+  border-radius: 25px;
+  overflow: hidden;
+  /* margin: 20px 0; */
+  position: fixed;
+}
+
+.progress-bar {
+  height: 30px;
+  background-color: #76c7c0;
+  text-align: center;
+  line-height: 30px;
+  color: white;
+  transition: width 0.3s ease-in-out;
+}

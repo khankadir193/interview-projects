@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Scroll.css';
+import ProgressBar from './ProgressBar';
 
 const ScrollIndicator = () => {
     const [data, setData] = useState([]);
@@ -20,8 +21,9 @@ const ScrollIndicator = () => {
     }, [])
     return (
         <>
-        <div className='scroll-indicator'>
-        </div>
+        {/* <div className='scroll-indicator'>
+        </div> */}
+        <ProgressBar />
             <div className='scroll-container'>
                 <h1>title</h1>
                 {data.length > 0 && data.map((item) => {

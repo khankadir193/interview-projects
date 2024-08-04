@@ -1,11 +1,17 @@
 .button-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  /* grid-template-rows: repeat(3,1fr); */
+  grid-template-rows: auto;
   /* grid-gap: 10px; */
   width: 300px;
-  height: auto;
+  height: 300px;
   margin: 0 auto;
+  /* margin-top: auto; */
+  /* margin-bottom: auto; */
+  border: 1vw solid purple;
+  align-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .button-container button {

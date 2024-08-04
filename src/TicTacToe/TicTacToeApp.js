@@ -37,15 +37,19 @@ const TicTacToeApp = () => {
         }
     }
 
-    return(
+    return (
         <div className="button-container">
             {board.map((_, index) => (
-                <ButtonComp 
-                    key={index} 
-                    value={board[index] || ''} 
+                <ButtonComp
+                    key={index}
+                    value={board[index] || ''}
                     handleClick={() => handleClick(index)}
                 />
             ))}
+            {
+                winner === "X"
+                    ? <h2>X wins!</h2> : winner === "O" ? <h2>O wins!</h2> : winner === "draw" && <h2>Draw!</h2>
+            }
         </div>
     )
 };

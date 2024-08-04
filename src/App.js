@@ -5,6 +5,7 @@ import QrGenerator from './Qr-code-generator/QrGenerator';
 import QrReader from './Qr-code-generator/QrReader';
 import LightDarkMode from './LightToggle/LightDarkMode';
 import ScrollIndicator from './ScrollIndicator/ScrollIndicator';
+import TicTacToeApp from './TicTacToe/TicTacToeApp';
 
 
 /**
@@ -27,7 +28,9 @@ function App() {
       {/* Render the LightDarkMode component */}
       {/* <LightDarkMode /> */}
       {/* Render the ScrollIndicator component */}
-      <ScrollIndicator />
+      {/* <ScrollIndicator /> */}
+      {/* tic tac toe */}
+      <TicTacToeApp />
     </div>
   );
 }

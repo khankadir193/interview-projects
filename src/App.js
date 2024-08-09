@@ -7,6 +7,7 @@ import LightDarkMode from './LightToggle/LightDarkMode';
 import ScrollIndicator from './ScrollIndicator/ScrollIndicator';
 import TicTacToeApp from './TicTacToe/TicTacToeApp';
 import ParentComp from './Excercise/ParentComp';
+import TodoList from './TodoApp/TodoList';
 
 
 /**
@@ -32,7 +33,8 @@ function App() {
       {/* <ScrollIndicator /> */}
       {/* tic tac toe */}
       {/* <TicTacToeApp /> */}
-      <ParentComp />
+      {/* <ParentComp /> */}
+      <TodoList />
     </div>
   );
 }

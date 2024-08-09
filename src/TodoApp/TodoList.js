@@ -1,13 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './todos.css';
+import List from './List';
 
 
 const TodoList = () => {
-    const handleSubmit = (event)=>{
+    const [data, setData] = useState();
+
+    const handleSubmit = (event) => {
         event.preventDefault();
         const input = event.target[0]?.value;
-        console.log("input",input);
-        console.log("clicked",event);
+        console.log("input", input);
+        console.log("clicked", event);
+        setData(input);
     };
 
     return (
@@ -17,6 +21,7 @@ const TodoList = () => {
                     <input type='text' placeholder='Add Todo' />
                     <button type='submit'>Add TODO</button>
                 </form>
+                {data && <List addData={setData} data={data} />}
             </div>
         </div>
     );

@@ -92,4 +92,15 @@ body{
     
 }
 
+.subList-container, .icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4vw;
+}
 
+.subList-container, .icons, FontAwesomeIcon{
+    font-size: 16px;
+    margin-right: 10px;
+    cursor: pointer;    
+}

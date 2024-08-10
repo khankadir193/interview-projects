@@ -10,8 +10,11 @@ function List({ data }) {
     <div className='list-container'>
       <div className='subList-container'>
         <span>{data}</span>
-        <FontAwesomeIcon icon={faEdit} />
-        <FontAwesomeIcon icon={faTrashAlt} />
+        <div className='icons'>
+          <FontAwesomeIcon icon={faEdit} />
+          <FontAwesomeIcon icon={faTrashAlt} />
+        </div>
+
       </div>
     </div>
   );

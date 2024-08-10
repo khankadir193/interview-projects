@@ -67,12 +67,29 @@ body{
 }
 
 .subList-container{
+    width: 50vw;
+    height: 5vh;
+    background-color: #f0f0f0;
+    border-radius: 2vw;
+    margin-bottom: 10px;
+    padding: 2vw;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+}
+
+.subList-container h3{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.subList-container span{
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 10vw;
+    
 }
 
 

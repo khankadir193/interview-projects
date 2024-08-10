@@ -4,12 +4,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 
-function List({ data }) {
-  console.log('data...', data);
+function List({ item }) {
+  console.log('data...', item);
   return (
     <div className='list-container'>
       <div className='subList-container'>
-        <span>{data}</span>
+        <span>{item}</span>
         <div className='icons'>
           <FontAwesomeIcon icon={faEdit} />
           <FontAwesomeIcon icon={faTrashAlt} />

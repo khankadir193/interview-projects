@@ -5,18 +5,22 @@ import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 // import {ContentEditable,suppressContentEditableWarning} from 'react-contenteditable';
 
 
-function List({ item }) {
+function List({ item,index, data,  handleDelete }) {
+  console.log('item...', item);
+  console.log('data...', data);
+
   const [edit,setEdit] = useState(false);
+
   const handleEdit = () => {
     console.log('edit...');
     setEdit(true);
   };
-
   const handleSave = (e) => {
     console.log('save...', e.target.innerText);
     setEdit(false);
-  }
-  console.log('data...', item);
+  };
+  
+
   return (
     <div className='list-container'>
       <div className='subList-container'>
@@ -29,9 +33,8 @@ function List({ item }) {
         </span>
         <div className='icons'>
           <FontAwesomeIcon icon={faEdit} onClick={handleEdit} />
-          <FontAwesomeIcon icon={faTrashAlt} />
+          <FontAwesomeIcon icon={faTrashAlt} onClick={() => handleDelete(item,index)} />
         </div>
-
       </div>
     </div>
   );

@@ -25,8 +25,8 @@ const TodoList = () => {
 
     const handleDelete = (text,index) => {
         console.log('text...??',text);
-        const  result = data.filter(item => item === text);
-        // .filter(item => item === item);
+        const  result = data.filter(item => item !== text);
+        setData(result);
         console.log('result...??',result);
         setDeleteData(true);
         console.log('delet...',index);

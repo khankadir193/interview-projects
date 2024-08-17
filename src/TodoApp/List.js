@@ -6,17 +6,15 @@ import { faEdit, faTrashAlt } from '@fortawesome/free-solid-svg-icons';
 
 
 function List({ item,index, data,  handleDelete }) {
-  console.log('item...', item);
-  console.log('data...', data);
 
   const [edit,setEdit] = useState(false);
 
-  const handleEdit = () => {
-    console.log('edit...');
+  const handleEdit = (event) => {
     setEdit(true);
   };
   const handleSave = (e) => {
-    console.log('save...', e.target.innerText);
+    const editedText = e.target.innerText;
+    data[index] = editedText;
     setEdit(false);
   };
   

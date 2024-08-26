@@ -1,8 +1,9 @@
-const ApiComp = async (URL) => {
-    const result = await fetch(URL);
-    const data = await result.json();
-    return data;
-}
+const ApiComp = async (URL) => (await fetch(URL)).json();
+// const ApiComp = async (URL) => {
+//     const result = await fetch(URL);
+//     const data = await result.json();
+//     return data;
+// }
 
 export default ApiComp;
 

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ApiComp from '../ApiCall/ApiComp';
 const DictComp = () => {
-    const [api,setApi] = useState();
+    const [api , setApi] = useState();
 
     useEffect(() => {
         const fetchData = async (txt) => {

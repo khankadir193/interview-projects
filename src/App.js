@@ -8,6 +8,7 @@ import ScrollIndicator from './ScrollIndicator/ScrollIndicator';
 import TicTacToeApp from './TicTacToe/TicTacToeApp';
 import ParentComp from './Excercise/ParentComp';
 import TodoList from './TodoApp/TodoList';
+import DictComp from './DictionaryApp/DictComp';
 
 
 /**
@@ -34,7 +35,8 @@ function App() {
       {/* tic tac toe */}
       {/* <TicTacToeApp /> */}
       {/* <ParentComp /> */}
-      <TodoList />
+      {/* <TodoList /> */}
+      <DictComp />
     </div>
   );
 }

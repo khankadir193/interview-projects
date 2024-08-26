@@ -7,10 +7,10 @@ const DictComp = () => {
     const [definition, setDefinition] = useState([]);
 
     const fetchData = async (txt) => {
-        console.log('inputValue...', inputValue.target.value[0]);
         const response = await ApiComp(`https://api.dictionaryapi.dev/api/v2/entries/en/${txt}`);
         setApi(response);
-        setDefinition(response.length ? response[0].meanings[0].definitions : [{definition:'getting error'}]);
+        console.log('response...???', response);
+        setDefinition(response.length ? response[0].meanings[0].definitions : [{ definition: response.message }]);
         // console.log('response...???', response[0].meanings[0].definitions[0].definition);
         // const def1 = response[0].meanings[0].definitions[0].definition; 
         // const def2 = response[0].meanings[0].definitions[0].definition; 
@@ -20,7 +20,7 @@ const DictComp = () => {
         //    firstDefinition:def2, 
         //    firstDefinition:def3, 
         // }
-        
+
 
     }
 
@@ -29,12 +29,15 @@ const DictComp = () => {
         <div className='dict-container'>
             <input type='text' placeholder='enter your vocab' onChange={setInputValue} />
             <button onClick={() => fetchData(inputValue.target.value)}>Dictionary</button>
-            {definition?.map((item) => {
+            {definition?.map((item, index) => {
+                const lines = item.definition.split('\n');
                 return (
-                    <>
-                        <h2>{item?.definition}</h2>
-                    </>
-                )
+                    <div key={index}>
+                        {lines.map((line, lineIndex) => (
+                            <p key={lineIndex} className='def-content'>{index + 1}.{lineIndex + 1}. {line}</p>
+                        ))}
+                    </div>
+                );
             })}
             {/* <h2>{JSON.stringify(api,12,null)}</h2> */}
         </div>

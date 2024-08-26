@@ -30,9 +30,11 @@ const DictComp = () => {
             <input type='text' placeholder='enter your vocab' onChange={setInputValue} />
             <button onClick={() => fetchData(inputValue.target.value)}>Dictionary</button>
             {definition?.map((item, index) => {
+                console.log('item...',item);
                 const lines = item.definition.split('\n');
+                console.log('lines...',lines);
                 return (
-                    <div key={index}>
+                    <div key={index} className='def-container'>
                         {lines.map((line, lineIndex) => (
                             <p key={lineIndex} className='def-content'>{index + 1}.{lineIndex + 1}. {line}</p>
                         ))}

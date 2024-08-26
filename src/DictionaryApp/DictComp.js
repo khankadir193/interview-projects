@@ -20,29 +20,30 @@ const DictComp = () => {
         //    firstDefinition:def2, 
         //    firstDefinition:def3, 
         // }
-
-
     }
 
 
     return (
-        <div className='dict-container'>
-            <input type='text' placeholder='enter your vocab' onChange={setInputValue} />
-            <button onClick={() => fetchData(inputValue.target.value)}>Dictionary</button>
-            {definition?.map((item, index) => {
-                console.log('item...',item);
-                const lines = item.definition.split('\n');
-                console.log('lines...',lines);
-                return (
-                    <div key={index} className='def-container'>
-                        {lines.map((line, lineIndex) => (
-                            <p key={lineIndex} className='def-content'>{index + 1}.{lineIndex + 1}. {line}</p>
-                        ))}
-                    </div>
-                );
-            })}
-            {/* <h2>{JSON.stringify(api,12,null)}</h2> */}
-        </div>
+        <>
+            <div className='dict-container'>
+                <input type='text' placeholder='enter your vocab' onChange={setInputValue} />
+                <button onClick={() => fetchData(inputValue.target.value)}>Dictionary</button>
+            </div>
+            <div className='def-container'>
+                {definition?.map((item, index) => {
+                    console.log('item...', item);
+                    const lines = item.definition.split('\n');
+                    console.log('lines...', lines);
+                    return (
+                        <div key={index}>
+                            {lines.map((line, lineIndex) => (
+                                <p key={lineIndex} className='def-content'>{index + 1}.{lineIndex + 1}. {line}</p>
+                            ))}
+                        </div>
+                    );
+                })}
+            </div>
+        </>
     );
 };
 

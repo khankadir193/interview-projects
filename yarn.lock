@@ -1646,6 +1646,19 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
+"@khankadir321/my-ui-library@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/@khankadir321/my-ui-library/-/my-ui-library-1.0.0.tgz"
+  integrity sha512-5g/GNw4vDRWOYU67a5kY4ZbnDiiGiByYksr2RKCELZTukoClMi8fB8gCqmE9nhbqhXDDuSc5GPlxeqUomATFRg==
+  dependencies:
+    "@testing-library/jest-dom" "^5.17.0"
+    "@testing-library/react" "^13.4.0"
+    "@testing-library/user-event" "^13.5.0"
+    react "^18.3.1"
+    react-dom "^18.3.1"
+    react-scripts "5.0.1"
+    web-vitals "^2.1.4"
+
 "@leichtgewicht/ip-codec@^2.0.1":
   version "2.0.5"
   resolved "https://registry.npmjs.org/@leichtgewicht/ip-codec/-/ip-codec-2.0.5.tgz"

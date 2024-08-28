@@ -9,17 +9,7 @@ const DictComp = () => {
     const fetchData = async (txt) => {
         const response = await ApiComp(`https://api.dictionaryapi.dev/api/v2/entries/en/${txt}`);
         setApi(response);
-        console.log('response...???', response);
-        setDefinition(response.length ? response[0].meanings[0].definitions : [{ definition: response.message }]);
-        // console.log('response...???', response[0].meanings[0].definitions[0].definition);
-        // const def1 = response[0].meanings[0].definitions[0].definition; 
-        // const def2 = response[0].meanings[0].definitions[0].definition; 
-        // const def3 = response[0].meanings[0].definitions[0].definition; 
-        // const newObj = {
-        //    firstDefinition:def1, 
-        //    firstDefinition:def2, 
-        //    firstDefinition:def3, 
-        // }
+        setDefinition(response.length ? response[0].meanings[0].definitions : [{ definition: response.message }]); 
     }
 
 

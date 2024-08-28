@@ -7,13 +7,12 @@ const ParentComp = () => {
         setChildren(prevChildren => {
             const id = prevChildren.length + 1;
             const newChildren = [...prevChildren, { name: `child${id}`, id }];
-            console.log('children....', newChildren);
             return newChildren;
         });
     }
   return (
     <div>
-        <button onClick={addChild}>Parent</button>
+        <button onClick={addChild} style={{padding:'2vw',margin:'1vw',border:'1px solid black',borderRadius:'1vw'}}>Parent</button>
         {
             children.map((child) => {
                 return <ChildComp children={child} key={child.id}/>

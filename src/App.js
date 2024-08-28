@@ -9,6 +9,7 @@ import TicTacToeApp from './TicTacToe/TicTacToeApp';
 import ParentComp from './Excercise/ParentComp';
 import TodoList from './TodoApp/TodoList';
 import DictComp from './DictionaryApp/DictComp';
+import ParentComp2 from './DynamicComponent/ParentComp';
 
 
 /**
@@ -36,7 +37,8 @@ function App() {
       {/* <TicTacToeApp /> */}
       {/* <ParentComp /> */}
       {/* <TodoList /> */}
-      <DictComp />
+      {/* <DictComp /> */}
+      <ParentComp2 />
     </div>
   );
 }

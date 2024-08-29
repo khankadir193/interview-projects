@@ -10,6 +10,8 @@ import ParentComp from './Excercise/ParentComp';
 import TodoList from './TodoApp/TodoList';
 import DictComp from './DictionaryApp/DictComp';
 import ParentComp2 from './DynamicComponent/ParentComp';
+import DynamicChild from './DynamicComponent/DynamicChild';
+import DynamicParent from './DynamicComponent/DynamicParent';
 
 
 /**
@@ -38,7 +40,11 @@ function App() {
       {/* <ParentComp /> */}
       {/* <TodoList /> */}
       {/* <DictComp /> */}
-      <ParentComp2 />
+      {/* <ParentComp2 /> */}
+      <DynamicParent >
+        <div>This  is the div content...</div>
+        <DynamicChild></DynamicChild>
+      </DynamicParent>
     </div>
   );
 }

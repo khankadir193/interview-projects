@@ -44,4 +44,9 @@
     border-radius: 3vw;
     width: 10vw;
     background-color: yellowgreen;
+    border: none;
+    outline: none;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: black;
+    font-size: 1vw;
 }

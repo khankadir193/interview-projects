@@ -41,10 +41,11 @@ function App() {
       {/* <TodoList /> */}
       {/* <DictComp /> */}
       {/* <ParentComp2 /> */}
-      <DynamicParent >
+      {/* dynamic passing child comp into parent comp as props */}
+      {/* <DynamicParent >
         <div>This  is the div content...</div>
         <DynamicChild></DynamicChild>
-      </DynamicParent>
+      </DynamicParent> */}
     </div>
   );
 }

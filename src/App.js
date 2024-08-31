@@ -13,6 +13,7 @@ import ParentComp2 from './DynamicComponent/ParentComp';
 import DynamicChild from './DynamicComponent/DynamicChild';
 import DynamicParent from './DynamicComponent/DynamicParent';
 import GameComp from './PaperGame.js/GameComp';
+import QuizComp from './QuizApp/QuizComp';
 
 
 /**
@@ -47,7 +48,8 @@ function App() {
         <div>This  is the div content...</div>
         <DynamicChild></DynamicChild>
       </DynamicParent> */}
-      <GameComp />
+      {/* <GameComp /> */}
+      <QuizComp />
     </div>
   );
 }

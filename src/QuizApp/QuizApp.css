@@ -1,0 +1,48 @@
+/* *{
+    width: 100%;
+    height: 100vh;
+} */
+.quiz-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100vh;
+    width: 100%;
+    background-color: #292b2e;
+    padding: 2vw;
+}
+
+.card-container{
+    width: 30%;
+    height: 70vh;
+    background-color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 0 3vw #4be40a1a;
+    flex-direction: column;
+}
+
+.card-container:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+/* .card-container:hover{
+  transform: scale(1.1);
+} */
+
+
+.card-container h1{
+    font-size: 2vw;
+    font-family: monospace;
+    color: purple;
+    text-decoration: underline black;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
+.list-question{
+  display: flex;
+  margin: 1vw;
+}

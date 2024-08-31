@@ -14,37 +14,42 @@ const GameComp = () => {
         return options[random];
     };
 
+    const determineWinner = async(usrChoice, computerChoice) => {
+        if (usrChoice === computerChoice) {
+            return;
+        } else if (usrChoice === "Rock" && computerChoice === "Scissors") {
+            setUserScore(userScore + 1);
+        } else if (usrChoice === "Scissors" && computerChoice === "Paper") {
+            setUserScore(userScore + 1);
+        } else if (usrChoice === "Paper" && computerChoice === "Rock") {
+            setUserScore(userScore + 1);
+        } else {
+            setComputerScore(computerScore + 1);
+        }
+    };
+
+    const resetGame = async() => {
+        setComputerChoice('');
+        setComputerScore(0);
+        setUserChoice('');
+        setUserScore(0);
+    };
 
     const handleClick = async (event) => {
         const computerChoice = await computerCalculation();
         const buttonContent = await event.target.textContent;
         setComputerChoice(computerChoice);
         setUserChoice(buttonContent);
-        if (buttonContent === computerChoice) {
-            return;
-        } else if (buttonContent === "Rock" && computerChoice === "Scissors") {
-            setUserScore(userScore + 1);
-        } else if (buttonContent === "Scissors" && computerChoice === "Paper") {
-            setUserScore(userScore + 1);
-        } else if (buttonContent === "Paper" && computerChoice === "Rock") {
-            setUserScore(userScore + 1);
-        }else{
-            setComputerScore(computerScore + 1);
-        }
-
-        if(userScore + computerScore === 5){
-            if(userScore > computerScore){   
+        const winner = await determineWinner(buttonContent, computerChoice); // Call the determineWinner function with the user's choice and the computer's choice
+        if (userScore + computerScore === 5) {
+            if (userScore > computerScore) {
                 alert("You Won");
                 setWinner('You Won');
-            }else{   
-                alert("Computer Won");  
+            } else {
+                alert("Computer Won");
                 setWinner('Computer Won');
             }
-
-            setComputerChoice('');
-            setComputerScore(0);
-            setUserChoice('');
-            setUserScore(0);
+            resetGame();
         }
     }
 

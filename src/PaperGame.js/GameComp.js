@@ -17,11 +17,16 @@ const GameComp = () => {
     const determineWinner = async(usrChoice, computerChoice) => {
         if (usrChoice === computerChoice) {
             return;
-        } else if (usrChoice === "Rock" && computerChoice === "Scissors") {
-            setUserScore(userScore + 1);
-        } else if (usrChoice === "Scissors" && computerChoice === "Paper") {
-            setUserScore(userScore + 1);
-        } else if (usrChoice === "Paper" && computerChoice === "Rock") {
+        } 
+
+        //user choice wins
+        const userChoiceWins = 
+        ((usrChoice === "Rock" && computerChoice === "Scissors") ||
+        (usrChoice === "Scissors" && computerChoice === "Paper") || 
+        (usrChoice === "Paper" && computerChoice === "Rock"));
+
+        //check whether userChoice else computerChoice
+        if (userChoiceWins) {
             setUserScore(userScore + 1);
         } else {
             setComputerScore(computerScore + 1);
@@ -51,7 +56,7 @@ const GameComp = () => {
             }
             resetGame();
         }
-    }
+    };
 
 
 

@@ -28,9 +28,9 @@ const GameComp = () => {
 
         //check whether userChoice else computerChoice
         if (userChoiceWins) {
-            setUserScore(userScore + 1);
+            setUserScore(prevScore => prevScore + 1);
         } else {
-            setComputerScore(computerScore + 1);
+            setComputerScore(prevScore => prevScore + 1);
         }
     };
 

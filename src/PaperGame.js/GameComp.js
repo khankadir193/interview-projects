@@ -15,6 +15,7 @@ const GameComp = () => {
     };
 
     const determineWinner = async(usrChoice, computerChoice) => {
+        //if tie just return nothing.
         if (usrChoice === computerChoice) {
             return;
         } 
@@ -79,4 +80,4 @@ const GameComp = () => {
     )
 }
 
-export default GameComp
+export default GameComp;

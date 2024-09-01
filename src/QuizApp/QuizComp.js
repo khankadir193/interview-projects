@@ -38,6 +38,7 @@ const QuizComp = () => {
                                     );
                                 })}
                             </ul>
+                            <button>Submit</button>
                         </div>
                     );
                 })}

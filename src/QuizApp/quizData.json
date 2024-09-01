@@ -4,6 +4,26 @@
             "question": "What is the capital of France?",
             "options": ["Paris", "London", "Berlin", "Madrid"],
             "correctAnswer": "Paris"
+        },
+        {
+            "question": "Which language is primarily spoken in Brazil?",
+            "options": ["Spanish", "Portuguese", "English", "French"],
+            "correctAnswer": "Portuguese"
+        },
+        {
+            "question": "What is the largest planet in our solar system?",
+            "options": ["Earth", "Mars", "Jupiter", "Saturn"],
+            "correctAnswer": "Jupiter"
+        },
+        {
+            "question": "Who wrote the play 'Romeo and Juliet'?",
+            "options": ["William Shakespeare", "Mark Twain", "Charles Dickens", "Jane Austen"],
+            "correctAnswer": "William Shakespeare"
+        },
+        {
+            "question": "Which element has the chemical symbol 'O'?",
+            "options": ["Oxygen", "Gold", "Hydrogen", "Carbon"],
+            "correctAnswer": "Oxygen"
         }
     ]
 }

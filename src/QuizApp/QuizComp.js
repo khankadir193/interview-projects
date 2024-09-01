@@ -12,6 +12,7 @@ const QuizComp = () => {
         if (QuizData.quizData.length - 1 === submit?.length) {
             alert('Quiz Completed');
             setQuizData([QuizData.quizData[0]]);
+            setSubmit([]);
             return
         } else {
             setQuizData([QuizData.quizData[submit.length + 1]]);

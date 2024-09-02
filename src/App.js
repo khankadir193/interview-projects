@@ -14,6 +14,7 @@ import DynamicChild from './DynamicComponent/DynamicChild';
 import DynamicParent from './DynamicComponent/DynamicParent';
 import GameComp from './PaperGame.js/GameComp';
 import QuizComp from './QuizApp/QuizComp';
+import FilpCoin from './CoinApp/FilpCoin';
 
 
 /**
@@ -49,7 +50,8 @@ function App() {
         <DynamicChild></DynamicChild>
       </DynamicParent> */}
       {/* <GameComp /> */}
-      <QuizComp />
+      {/* <QuizComp /> */}
+      <FilpCoin />
     </div>
   );
 }

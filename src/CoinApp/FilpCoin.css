@@ -1,0 +1,23 @@
+.flip-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.flip-container img{
+    width: 300px;
+    height: 200px;
+}
+
+.flip-container button{
+    width: 10vw;
+    height: 3vw;
+    background-color: azure;
+    border-radius: 1vw;
+    color: purple;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 2vw;
+    font-weight: bolder;
+}
+

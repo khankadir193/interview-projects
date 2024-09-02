@@ -6,11 +6,14 @@ import './FilpCoin.css';
 const FilpCoin = () => {
     const [isHead, setIsHead] = React.useState(true);
 
+    const flipCoin = () => {
+        setIsHead(!isHead);
+    };
     return (
         <div className="flip-container">
-            <img src={headCoin} alt='head-coin' />
-            <img src={tailCoin} alt='tail-coin' />
-            <button onClick={() => console.log('Flip')}>Flip</button>
+            <img src={isHead ? headCoin : tailCoin} alt='head-coin' />
+            {/* <img src={tailCoin} alt='tail-coin' /> */}
+            <button onClick={() => flipCoin()}>Flip</button>
         </div>
     );
 };

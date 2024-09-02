@@ -9,6 +9,7 @@ const FilpCoin = () => {
     const flipCoin = () => {
         setIsHead(!isHead);
     };
+    
     return (
         <div className="flip-container">
             <img src={isHead ? headCoin : tailCoin} alt='head-coin' />

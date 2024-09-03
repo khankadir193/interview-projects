@@ -15,6 +15,7 @@ import DynamicParent from './DynamicComponent/DynamicParent';
 import GameComp from './PaperGame.js/GameComp';
 import QuizComp from './QuizApp/QuizComp';
 import FilpCoin from './CoinApp/FilpCoin';
+import LocFinderApp from './LocationFinder/LocFinderApp';
 
 
 /**
@@ -51,7 +52,8 @@ function App() {
       </DynamicParent> */}
       {/* <GameComp /> */}
       {/* <QuizComp /> */}
-      <FilpCoin />
+      {/* <FilpCoin /> */}
+      <LocFinderApp />
     </div>
   );
 }

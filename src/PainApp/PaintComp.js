@@ -1,34 +1,39 @@
 import React from 'react';
 import ReactPainter from 'react-painter';
 import './PaintComp.css';
+import { SketchPicker } from 'react-color';
 
 const CustomPainter = () => {
-  const handleSave = (blob) => {
-    console.log('Saved image:', blob);
-    // Here you can handle the saved image blob (e.g., upload it, display it, etc.)
-  };
+    const handleSave = (blob) => {
+        console.log('Saved image:', blob);
+        // Here you can handle the saved image blob (e.g., upload it, display it, etc.)
+    };
 
-  return (
-    <ReactPainter
-      width={1000}
-      height={300}
-      onSave={handleSave}
-      render={({ triggerSave, canvas, imageCanDownload }) => (
-        <div className='container'>
-          <h2 className='heading'>Awesome Heading</h2>
-          {imageCanDownload && (
-            <p className='errorText'>Sorry, the image that you have provided is not accessible.</p>
-          )}
-          <div className='canvasContainer'>
-            {canvas}
-          </div>
-          <button className='saveButton' type='button' title='Save' aria-label='Save' onClick={triggerSave}>
-            Save
-          </button>
+    return (
+        <div>
+            <SketchPicker />
+            <ReactPainter
+                width={1000}
+                height={300}
+                onSave={handleSave}
+                render={({ triggerSave, canvas, imageCanDownload }) => (
+                    <div className='container'>
+                        <h2 className='heading'>Awesome Heading</h2>
+                        {imageCanDownload && (
+                            <p className='errorText'>Sorry, the image that you have provided is not accessible.</p>
+                        )}
+                        <div className='canvasContainer'>
+                            {canvas}
+                        </div>
+                        <button className='saveButton' type='button' title='Save' aria-label='Save' onClick={triggerSave}>
+                            Save
+                        </button>
+                    </div>
+                )}
+            />
         </div>
-      )}
-    />
-  );
+
+    );
 };
 
 // const styles = {

@@ -1,17 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactPainter from 'react-painter';
 import './PaintComp.css';
 import { SketchPicker } from 'react-color';
 
 const CustomPainter = () => {
+    const [color, setColor] = useState('#000000');
     const handleSave = (blob) => {
         console.log('Saved image:', blob);
         // Here you can handle the saved image blob (e.g., upload it, display it, etc.)
     };
 
+    const handleColorChange = (color) => {
+        console.log('color...???',color.hex);
+        setColor(color);
+        console.log(color.hex); // or do something with the selected color
+    };
+
     return (
         <div className='container'>
-            <SketchPicker />
+            <SketchPicker
+                color={color}
+                onChangeComplete={handleColorChange}
+            />
             <ReactPainter
                 width={1000}
                 height={300}

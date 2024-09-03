@@ -10,14 +10,14 @@ const CustomPainter = () => {
     };
 
     return (
-        <div>
+        <div className='container'>
             <SketchPicker />
             <ReactPainter
                 width={1000}
                 height={300}
                 onSave={handleSave}
                 render={({ triggerSave, canvas, imageCanDownload }) => (
-                    <div className='container'>
+                    <div className='sub-container'>
                         <h2 className='heading'>Awesome Heading</h2>
                         {imageCanDownload && (
                             <p className='errorText'>Sorry, the image that you have provided is not accessible.</p>

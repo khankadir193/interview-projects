@@ -1,13 +1,22 @@
 .container{
     display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    gap: 1vw;
+ 
+    background-color: aqua;
+    height: 100vh;
+    border-radius: 2vw;
+}
+
+.sub-container{
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 1vw;
-    /* margin-top: 2vw; */
-    background-color: aqua;
-    height: 100vh;
-    border-radius: 2vw; 
+    /* margin-top: 2vw; */ 
 }
 
 .heading{

@@ -16,6 +16,7 @@ import GameComp from './PaperGame.js/GameComp';
 import QuizComp from './QuizApp/QuizComp';
 import FilpCoin from './CoinApp/FilpCoin';
 import LocFinderApp from './LocationFinder/LocFinderApp';
+import PaintComp from './PainApp/PaintComp';
 
 
 /**
@@ -53,7 +54,8 @@ function App() {
       {/* <GameComp /> */}
       {/* <QuizComp /> */}
       {/* <FilpCoin /> */}
-      <LocFinderApp />
+      {/* <LocFinderApp /> */}
+      <PaintComp />
     </div>
   );
 }

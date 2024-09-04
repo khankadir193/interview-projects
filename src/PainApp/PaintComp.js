@@ -54,43 +54,9 @@ const CustomPainter = () => {
                 )}
             />
         </div>
-
     );
 };
 
-// const styles = {
-//   container: {
-//     textAlign: 'center',
-//     padding: '20px',
-//     backgroundColor: '#f4f4f4',
-//     borderRadius: '8px',
-//     boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
-//   },
-//   heading: {
-//     fontSize: '24px',
-//     marginBottom: '20px',
-//     color: '#333',
-//   },
-//   errorText: {
-//     color: 'red',
-//     fontSize: '16px',
-//     marginBottom: '10px',
-//   },
-//   canvasContainer: {
-//     marginBottom: '20px',
-//     border: '2px solid #ddd',
-//     borderRadius: '4px',
-//     overflow: 'hidden',
-//   },
-//   saveButton: {
-//     padding: '10px 20px',
-//     fontSize: '16px',
-//     color: '#fff',
-//     backgroundColor: '#007bff',
-//     border: 'none',
-//     borderRadius: '4px',
-//     cursor: 'pointer',
-//   },
-// };
+
 
 export default CustomPainter;

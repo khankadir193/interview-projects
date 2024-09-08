@@ -1,4 +1,7 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
+
 import AccordianComp from './Accordian/AccordianComp';
 import GitHubProfileFinder from './GitHubProfile/GitHubProfileFinder';
 import QrGenerator from './Qr-code-generator/QrGenerator';
@@ -17,6 +20,7 @@ import QuizComp from './QuizApp/QuizComp';
 import FilpCoin from './CoinApp/FilpCoin';
 import LocFinderApp from './LocationFinder/LocFinderApp';
 import PaintComp from './PainApp/PaintComp';
+import BlogComp from './BlogApp/BlogComp';
 
 
 /**
@@ -56,6 +60,7 @@ function App() {
       {/* <FilpCoin /> */}
       {/* <LocFinderApp /> */}
       {/* <PaintComp /> */}
+      <BlogComp />
     </div>
   );
 }

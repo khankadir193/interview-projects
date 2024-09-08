@@ -55,7 +55,7 @@ function App() {
       {/* <QuizComp /> */}
       {/* <FilpCoin /> */}
       {/* <LocFinderApp /> */}
-      <PaintComp />
+      {/* <PaintComp /> */}
     </div>
   );
 }

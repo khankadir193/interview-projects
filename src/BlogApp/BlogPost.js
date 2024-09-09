@@ -1,8 +1,7 @@
 // src/components/BlogPost.js
 import React from 'react';
 
-const BlogPost = ({ title, content }) => {
-  console.log('tiltle1111', title, 'content1111', content);
+const BlogPost = ({ title, content}) => {
   return (
     <div className="card mb-3">
       <div className="card-body">

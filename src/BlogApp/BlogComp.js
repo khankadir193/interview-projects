@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import BlogForm from './BlogForm';
 import BlogPost from './BlogPost';
+import BlogList from './BlogList';
 
 const BlogComp = () => {
   const [showForm,setShowForm] = useState();
@@ -31,7 +32,7 @@ const BlogComp = () => {
       <button className='m-3 btn btn-primary btn-sm float-end' onClick={createPost}>Create Post</button>
       {showForm ? <BlogForm addPost={addPost} content={content}  title={title} setContent={setContent} setTitle={setTitle} />
       : 'blog content here'}
-      {showPost && <BlogPost title={title} content={content} />}
+      {showPost && <BlogList posts={posts} />}
     </div>
   );
 };

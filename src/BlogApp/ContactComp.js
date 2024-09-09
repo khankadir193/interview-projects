@@ -3,15 +3,15 @@ import React from 'react';
 const ContactComp = () => {
   return (
     <div className="container mt-5">
-      <h2 className="mb-4 text-center">Get in Touch</h2>
+      {/* <h2 className="mb-4 text-center">Get in Touch</h2> */}
       <div className="row">
         <div className="col-md-6">
           {/* Contact Information */}
           <h4>Contact Information</h4>
           <p><i className="fas fa-user"></i> Abdul Kadir Khan</p>
-          <p><i className="fas fa-envelope"></i> abdulkadir@example.com</p>
-          <p><i className="fas fa-phone"></i> +1234567890</p>
-          <p><i className="fas fa-map-marker-alt"></i> 123 Street, City, Country</p>
+          <p><i className="fas fa-envelope"></i> abdulkadirk059@gmail.com</p>
+          <p><i className="fas fa-phone"></i> +917985132148</p>
+          <p><i className="fas fa-map-marker-alt"></i> Sanpada,Sector - 5 , Golden Palace, Mumbai, India</p>
         </div>
         <div className="col-md-6">
           {/* Contact Form */}

@@ -2,9 +2,9 @@
 import React, { useState } from 'react';
 import BlogPost from './BlogPost';
 
-const BlogForm = ({ addPost }) => {
-  const [title, setTitle] = useState('');
-  const [content, setContent] = useState('');
+const BlogForm = ({ addPost, setTitle, setContent, content, title }) => {
+  // const [title, setTitle] = useState('');
+  // const [content, setContent] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -13,9 +13,9 @@ const BlogForm = ({ addPost }) => {
     setContent('');
   };
 
-  if(content && title){
-    return <BlogPost title={title} content={content} />
-  }
+  // if(content && title){
+  //   return <BlogPost title={title} content={content} />
+  // }
 
   return (
     <form onSubmit={handleSubmit} className="mb-3">

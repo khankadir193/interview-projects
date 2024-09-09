@@ -13,7 +13,7 @@ const NavBar = () => {
                     <div className="collapse navbar-collapse d-flex justify-content-end gap-5" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item">
-                                <Link className="nav-link active" aria-current="page" to='/'>Home</Link>
+                                <Link className="nav-link active" aria-current="page" to="/">Home</Link>
                             </li>
                             <li className="nav-item">
                                 <Link className="nav-link" to="/about">About</Link>
@@ -33,7 +33,7 @@ const NavBar = () => {
                 </div>
             </nav>
         </>
-    )
+    );
 }
 
 export default NavBar;

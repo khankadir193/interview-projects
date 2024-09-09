@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const HomeComp = () => {
   return (
@@ -28,7 +29,7 @@ const HomeComp = () => {
           <p>
             Feel free to explore the blog, read articles, and don't hesitate to reach out if you have any questions or comments!
           </p>
-          <a href="/contact" className="btn btn-primary">Contact Me</a>
+          <Link to="/contact" className="btn btn-primary">Contact Me</Link>
         </div>
       </div>
     </div>

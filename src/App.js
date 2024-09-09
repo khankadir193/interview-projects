@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-
+import { BrowserRouter as Router, Routes, Route,Link } from 'react-router-dom';
 import AccordianComp from './Accordian/AccordianComp';
 import GitHubProfileFinder from './GitHubProfile/GitHubProfileFinder';
 import QrGenerator from './Qr-code-generator/QrGenerator';
@@ -20,7 +20,11 @@ import QuizComp from './QuizApp/QuizComp';
 import FilpCoin from './CoinApp/FilpCoin';
 import LocFinderApp from './LocationFinder/LocFinderApp';
 import PaintComp from './PainApp/PaintComp';
+import HomeComp from './BlogApp/HomeComp';
+import AboutComp from './BlogApp/AboutComp';
+import ContainerComp from './BlogApp/ContainerComp';
 import BlogComp from './BlogApp/BlogComp';
+import ContactComp from './BlogApp/ContactComp';
 
 
 /**
@@ -60,7 +64,17 @@ function App() {
       {/* <FilpCoin /> */}
       {/* <LocFinderApp /> */}
       {/* <PaintComp /> */}
-      <BlogComp />
+
+      {/* routing using react router */}
+      <Router>
+        <ContainerComp />
+        <Routes>
+          <Route exact path="/" element={<HomeComp />} />
+          <Route exact path="/about" element={<AboutComp />} />
+          <Route exact path="/blog" element={<BlogComp />} />
+          <Route exact path="/contact" element={<ContactComp />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

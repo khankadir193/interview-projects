@@ -1,12 +1,9 @@
-import React from 'react';
-import NavBar from './NavBar';
+import React from 'react'
 
 const BlogComp = () => {
-    return (
-        <div>
-            <NavBar />
-        </div>
-    );
+  return (
+    <div>BlogComp</div>
+  )
 }
 
 export default BlogComp;

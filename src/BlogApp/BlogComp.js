@@ -17,13 +17,12 @@ const BlogComp = () => {
     setPosts([post, ...posts]);
     setShowForm(false);
     setShowPost(true);
-    console.log('title...???',title);
-    console.log('content...????',content);
   };
 
   const createPost = () => {
     console.log('Create Post');
     setShowForm(true);
+    setShowPost(false);
   };
 
   return (

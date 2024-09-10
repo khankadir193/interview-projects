@@ -29,8 +29,7 @@ const BlogComp = () => {
     <div>
       {/* BlogComp */}
       <button className='m-3 btn btn-primary btn-sm float-end' onClick={createPost}>Create Post</button>
-      {showForm ? <BlogForm addPost={addPost} content={content}  title={title} setContent={setContent} setTitle={setTitle} />
-      : 'blog content here'}
+      {showForm && <BlogForm addPost={addPost} content={content}  title={title} setContent={setContent} setTitle={setTitle} />}
       {showPost && <BlogList posts={posts} />}
     </div>
   );

@@ -2,13 +2,14 @@ import React, { useState } from 'react'
 import BlogForm from './BlogForm';
 import BlogPost from './BlogPost';
 import BlogList from './BlogList';
+import postData from './blog.json';
 
 const BlogComp = () => {
   const [showForm,setShowForm] = useState();
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [posts, setPosts] = useState([]);
-  const [showPost, setShowPost] = useState(false);
+  const [showPost, setShowPost] = useState(true);
   const [language, setLanguage] = useState('');
 
 
@@ -31,7 +32,7 @@ const BlogComp = () => {
       {/* BlogComp */}
       <button className='m-3 btn btn-primary btn-sm float-end' onClick={createPost}>Create Post</button>
       {showForm && <BlogForm addPost={addPost} content={content}  title={title} setContent={setContent} setTitle={setTitle} setLanguage={setLanguage} language={language} />}
-      {showPost && <BlogList posts={posts} />}
+      {showPost && <BlogList posts={postData} />}
     </div>
   );
 };

@@ -36,7 +36,7 @@ const BlogPost = ({ title, content }) => {
             <p className="card-text text-secondary" style={{ lineHeight: '1.8' }}>
               {content}
             </p>
-            <a href="#" className="btn btn-outline-primary" onClick={() => setShowMore(false)}>
+            <a href="#" className="btn btn-outline-primary" onClick={displayContent}>
               Show Less
             </a>
           </div>

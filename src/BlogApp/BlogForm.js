@@ -1,21 +1,13 @@
-// src/components/BlogForm.js
-import React, { useState } from 'react';
-import BlogPost from './BlogPost';
+import React from 'react';
 
-const BlogForm = ({ addPost, setTitle, setContent, content, title }) => {
-  // const [title, setTitle] = useState('');
-  // const [content, setContent] = useState('');
-
+const BlogForm = ({ addPost, setTitle, setContent, setLanguage, content, title, language }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
-    addPost({ title, content });
+    addPost({ title, content, language });
     setTitle('');
     setContent('');
+    setLanguage('');
   };
-
-  // if(content && title){
-  //   return <BlogPost title={title} content={content} />
-  // }
 
   return (
     <form onSubmit={handleSubmit} className="mb-3">
@@ -29,6 +21,24 @@ const BlogForm = ({ addPost, setTitle, setContent, content, title }) => {
           required
         />
       </div>
+      
+      <div className="form-group">
+        <label>Programming Language</label>
+        <select
+          className="form-control"
+          value={language}
+          onChange={(e) => setLanguage(e.target.value)}
+          required
+        >
+          <option value="">Select a language</option>
+          <option value="JavaScript">JavaScript</option>
+          <option value="Java">Java</option>
+          <option value="React JS">React JS</option>
+          <option value="Python">Python</option>
+          <option value="C++">C++</option>
+        </select>
+      </div>
+
       <div className="form-group">
         <label>Content</label>
         <textarea
@@ -39,6 +49,7 @@ const BlogForm = ({ addPost, setTitle, setContent, content, title }) => {
           required
         ></textarea>
       </div>
+
       <button type="submit" className="btn btn-primary mt-2">Add Post</button>
     </form>
   );

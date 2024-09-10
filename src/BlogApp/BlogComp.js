@@ -9,6 +9,7 @@ const BlogComp = () => {
   const [content, setContent] = useState('');
   const [posts, setPosts] = useState([]);
   const [showPost, setShowPost] = useState(false);
+  const [language, setLanguage] = useState('');
 
 
   const addPost = (post) =>{
@@ -29,7 +30,7 @@ const BlogComp = () => {
     <div>
       {/* BlogComp */}
       <button className='m-3 btn btn-primary btn-sm float-end' onClick={createPost}>Create Post</button>
-      {showForm && <BlogForm addPost={addPost} content={content}  title={title} setContent={setContent} setTitle={setTitle} />}
+      {showForm && <BlogForm addPost={addPost} content={content}  title={title} setContent={setContent} setTitle={setTitle} setLanguage={setLanguage} language={language} />}
       {showPost && <BlogList posts={posts} />}
     </div>
   );

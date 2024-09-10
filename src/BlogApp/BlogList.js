@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import BlogPost from './BlogPost';
 
 const BlogList = ({ posts }) => {
-  const [showMore, setShowMore] = useState(false);  // Tracks if we are showing more
-  const [expandedLang, setExpandedLang] = useState('');  // Tracks which language's content is expanded
+  const [expandedLang, setExpandedLang] = useState(null); // Track which language is expanded
 
   const handleExpandData = (language) => {
-    // Set the state to show the full content for the selected language
-    setShowMore(true);
-    setExpandedLang(language);
+    // Toggle the expanded state. If the same language is clicked again, collapse it.
+    setExpandedLang(expandedLang === language ? null : language);
   };
 
   return (
@@ -20,10 +18,10 @@ const BlogList = ({ posts }) => {
             {/* Language Heading */}
             <h3 className="text-primary">{language.toUpperCase()}</h3>
 
-            {/* Show dummy data by default or full content if Read More was clicked */}
+            {/* Show dummy data by default or full content if Read More was clicked for that language */}
             {
-              !showMore || expandedLang !== language ? (
-                // Show dummy data if "Read More" is not clicked
+              expandedLang !== language ? (
+                // Show dummy data if "Read More" is not clicked or another language is expanded
                 <BlogPost title={`Intro to ${language}`} content={`This is a brief intro to ${language}.`} />
               ) : (
                 // Show the full content for the selected language when expanded
@@ -39,9 +37,13 @@ const BlogList = ({ posts }) => {
 
             {/* Show "Read More" only if we haven't expanded the current language */}
             {
-              (!showMore || expandedLang !== language) && (
+              expandedLang !== language ? (
                 <a href="#" className="btn btn-outline-primary" onClick={() => handleExpandData(language)}>
                   Read More
+                </a>
+              ) : (
+                <a href="#" className="btn btn-outline-secondary" onClick={() => handleExpandData(language)}>
+                  Show Less
                 </a>
               )
             }

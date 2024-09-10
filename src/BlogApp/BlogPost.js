@@ -1,11 +1,12 @@
 import React from 'react';
+import jsImage from './javascript.jpg';
 
 const BlogPost = ({ title, content }) => {
   return (
     <div className="card mb-4 shadow-sm border-0 rounded w-50">
       {/* Image placeholder for blog post */}
       <img 
-        src="https://via.placeholder.com/600x300" 
+        src={jsImage}
         alt="Blog post" 
         className="card-img-top rounded-top"
       />

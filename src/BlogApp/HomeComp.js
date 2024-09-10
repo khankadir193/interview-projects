@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import khankadir from './kadir.jpg';
 
 const HomeComp = () => {
   return (
@@ -8,9 +9,9 @@ const HomeComp = () => {
         {/* Blog Owner Image */}
         <div className="col-md-4 text-center">
           <img 
-            src="https://via.placeholder.com/150" 
+            src={khankadir}
             alt="Abdul Kadir Khan" 
-            className="img-fluid rounded-circle mb-3"
+            className="img-fluid rounded-circle mb-5"
           />
         </div>
         {/* Blog Introduction */}

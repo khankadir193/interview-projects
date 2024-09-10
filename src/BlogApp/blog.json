@@ -1,40 +1,32 @@
 {
   "javascript": [
     {
-      "title": "value",
-      "content": "js"
+      "title": "Understanding Closures",
+      "content": "Closures allow a function to access variables from an enclosing scope or environment."
     },
     {
-      "title": "Another title",
-      "content": "More JS content"
+      "title": "Async Await in JavaScript",
+      "content": "Async await makes asynchronous code look more like synchronous code."
     }
   ],
   "java": [
     {
-      "title": "value",
-      "content": "java"
+      "title": "Introduction to Java",
+      "content": "Java is a high-level programming language originally developed by Sun Microsystems."
     },
     {
-      "title": "content..",
-      "content": "javascript"
-    },
-    {
-      "title": "Another Java title",
-      "content": "Additional Java content"
+      "title": "",
+      "content": "This post should not render as it has no title."
     }
   ],
   "reactjs": [
     {
-      "title": "valu3333",
-      "content": "virtual dom"
-    },
-    {
       "title": "React Hooks",
-      "content": "useState, useEffect"
+      "content": "Hooks are functions that let you use state and other React features without writing a class."
     },
     {
-      "title": "React Components",
-      "content": "Functional & Class Components"
+      "title": "React Context API",
+      "content": "Context provides a way to pass data through the component tree without having to pass props down manually at every level."
     }
   ]
 }

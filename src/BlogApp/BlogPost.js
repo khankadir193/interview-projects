@@ -1,12 +1,19 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import jsImage from './javascript.jpg';
 import './blog.css'; // Import the CSS file for styling
 
 const BlogPost = ({ title, content }) => {
   const [showMore, setShowMore] = useState(false);
-  const displayContent = ()=>{
+
+  const displayContent = () => {
     setShowMore(!showMore);
+  };
+
+  // Check for valid title and content
+  if (!title || !content) {
+    return null; // Don't render anything if title or content is missing
   }
+
   return (
     <div className="card m-4 shadow-sm border-0 rounded w-50">
       {/* Image placeholder for blog post */}
@@ -17,7 +24,9 @@ const BlogPost = ({ title, content }) => {
       />
       <div className="card-body">
         {/* Blog title with better styling */}
-        <h4 className="card-title font-weight-bold mb-3 text-primary custom-title"> {title} </h4>
+        <h4 className="card-title font-weight-bold mb-3 text-primary custom-title"> 
+          {title} 
+        </h4>
         {/* Blog content with a lighter color and a smoother font */}
         <p className="card-text text-secondary" style={{ lineHeight: '1.8' }}>
           {showMore === false && content.length > 150 ? (

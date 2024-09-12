@@ -25,6 +25,7 @@ import AboutComp from './BlogApp/AboutComp';
 import ContainerComp from './BlogApp/ContainerComp';
 import BlogComp from './BlogApp/BlogComp';
 import ContactComp from './BlogApp/ContactComp';
+import MemoryGameComp from './MemoryGame/MemoryGameComp';
 
 
 /**
@@ -66,7 +67,7 @@ function App() {
       {/* <PaintComp /> */}
 
       {/* routing using react router */}
-      <Router>
+      {/* <Router>
         <ContainerComp />
         <Routes>
           <Route exact path="/" element={<HomeComp />} />
@@ -74,7 +75,9 @@ function App() {
           <Route exact path="/blog" element={<BlogComp />} />
           <Route exact path="/contact" element={<ContactComp />} />
         </Routes>
-      </Router>
+      </Router> */}
+      {/* memory game component */}
+      <MemoryGameComp />
     </div>
   );
 }

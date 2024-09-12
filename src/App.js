@@ -26,6 +26,7 @@ import ContainerComp from './BlogApp/ContainerComp';
 import BlogComp from './BlogApp/BlogComp';
 import ContactComp from './BlogApp/ContactComp';
 import MemoryGameComp from './MemoryGame/MemoryGameComp';
+import MemoryGameComp2 from './MemoryGame/MemoryGameComp2';
 
 
 /**
@@ -77,7 +78,7 @@ function App() {
         </Routes>
       </Router> */}
       {/* memory game component */}
-      <MemoryGameComp />
+      <MemoryGameComp2 />
     </div>
   );
 }

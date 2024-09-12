@@ -4,12 +4,14 @@ import cssIcon from './css.png';
 import javaIcon from './java.png';
 import htmlIcon from './html.png';
 import jsIcon from './js.png';
+import reactIcon from './react.png';
+import nodeIcon from './node.png';
 
 const MemoryGameComp2 = () => {
     const [flippedCards,setFlippedCards] = React.useState(Array(12).fill(false)); //array of flipped cards
-    const images = [cssIcon, javaIcon, htmlIcon, jsIcon,
+    const images = [cssIcon, javaIcon, htmlIcon, jsIcon, reactIcon,nodeIcon,
         cssIcon, javaIcon, htmlIcon, jsIcon,
-        cssIcon, javaIcon, htmlIcon, jsIcon];
+        reactIcon,nodeIcon];
     const handleCardClick = (index) => {
         return () => {
             setFlippedCards((prevFlippedCards) => {

@@ -3,10 +3,18 @@ import BlogPost from './BlogPost';
 
 const BlogList = ({ posts }) => {
   const [expandedLang, setExpandedLang] = useState(null); // Track which language is expanded
+  const [showMore, setShowMore] = useState(false); // Track showMore state for the selected language
 
   const handleExpandData = (language) => {
-    // Toggle the expanded state. If the same language is clicked again, collapse it.
-    setExpandedLang(expandedLang === language ? null : language);
+    if (expandedLang === language && showMore) {
+      // If the same language is clicked again, collapse it
+      setShowMore(false);
+      setExpandedLang(null);
+    } else {
+      // Expand the selected language and collapse others
+      setExpandedLang(language);
+      setShowMore(true);
+    }
   };
 
   return (
@@ -25,13 +33,15 @@ const BlogList = ({ posts }) => {
                 <BlogPost title={`Intro to ${language}`} content={`This is a brief intro to ${language}.`} />
               ) : (
                 // Show the full content for the selected language when expanded
-                posts[language].map((post, postIndex) => (
-                  <BlogPost 
-                    key={postIndex} 
-                    title={post.title} 
-                    content={post.content} 
-                  />
-                ))
+                expandedLang === language && showMore && (
+                  posts[language].map((post, postIndex) => (
+                    <BlogPost 
+                      key={postIndex} 
+                      title={post.title} 
+                      content={post.content} 
+                    />
+                  ))
+                )
               )
             }
 

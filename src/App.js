@@ -65,7 +65,7 @@ function App() {
       {/* <QuizComp /> */}
       {/* <FilpCoin /> */}
       {/* <LocFinderApp /> */}
-      {/* <PaintComp /> */}
+      <PaintComp />
 
       {/* routing using react router */}
       {/* <Router>
@@ -78,7 +78,7 @@ function App() {
         </Routes>
       </Router> */}
       {/* memory game component */}
-      <MemoryGameComp2 />
+      {/* <MemoryGameComp2 /> */}
     </div>
   );
 }

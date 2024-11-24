@@ -20,6 +20,27 @@ const CustomPainter = () => {
     const handleSave = (blob) => {
         console.log('Saved image:', blob);
         // Here you can handle the saved image blob (e.g., upload it, display it, etc.)
+         console.log('Saved image:', blob);
+
+        // Create a URL for the blob
+        const blobUrl = URL.createObjectURL(blob);
+
+        // Create a temporary anchor element
+        const link = document.createElement('a');
+        link.href = blobUrl;
+
+        // Set the download attribute with a file name
+        link.download = 'downloaded_image.png'; // Change the file name as needed
+
+        // Append the anchor to the document body (optional)
+        document.body.appendChild(link);
+
+        // Trigger a click event on the anchor
+        link.click();
+
+        // Clean up: Remove the anchor and revoke the blob URL
+        document.body.removeChild(link);
+        URL.revokeObjectURL(blobUrl);  
     };
 
     const handleColorChange = (color) => {

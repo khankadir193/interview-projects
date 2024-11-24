@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './QuizApp.css';
 import QuizData from './quizData.json';
 import QuizQuestions from './QuizQuestions';
@@ -7,7 +7,7 @@ const QuizComp = () => {
     const [submit, setSubmit] = useState([]);
     const [quizData, setQuizData] = useState([QuizData.quizData[0]]);
     const [submitData, setSubmitData] = useState([]); // true or false
-    const [rightQues,setRightQues] = useState(0);
+    const [rightQues, setRightQues] = useState(0);
     // console.log('quiz-data...', QuizData.quizData);
 
     const questionEvaluate = (option) => {
@@ -18,24 +18,41 @@ const QuizComp = () => {
         }
     };
 
-    const handleSubmit = (option) => {
-        if (QuizData.quizData.length - 1 === submit?.length) {
-            alert('Quiz Completed');
-            setQuizData([QuizData.quizData[0]]);
-            setSubmit([]);
-            const totalRightQuestons = submitData.filter(x => x).length;
-            setRightQues(totalRightQuestons);
-            console.log('totalRightQuestons...',totalRightQuestons);
-            return
-        } else {
-            setQuizData([QuizData.quizData[submit.length + 1]]);
-            setSubmit([...submit, option]);
-            const queRes = questionEvaluate(option);
-            // submitData.push(...queRes);
-            setSubmitData([...submitData, queRes]);
-            console.log('submitData...',submitData);
-        }
+    const handleQuizCompleted = async() => {
+        // Calculate total correct answers
+        const totalCorrectQuestions = submitData.filter(Boolean).length;
+
+        alert('Quiz Completed');
+        setRightQues(totalCorrectQuestions); // Update the state for correct questions
+        setQuizData([QuizData.quizData[0]]); // Reset to the first question
+        setSubmit([]); // Reset submitted answers
+        setSubmitData([]); // Reset submit data
+
+        console.log('Total Correct Questions:', totalCorrectQuestions);
+        alert('Quiz Completed');
     };
+
+    const handleSubmit = async(option) => {
+        const isQuizCompleted = QuizData.quizData.length - 1 === submit.length;
+
+        if (isQuizCompleted) {
+            setSubmit([...submitData, option]);
+            await handleQuizCompleted();
+            return;
+        }
+
+        // Handle the next question
+        const nextQuestionIndex = submit.length + 1;
+        const isAnswerCorrect = questionEvaluate(option); // Evaluate the submitted answer
+
+        // Update states for quiz progression
+        setQuizData([QuizData.quizData[nextQuestionIndex]]);
+        setSubmit([...submit, option]);
+        setSubmitData([...submitData, isAnswerCorrect]);
+
+        console.log('Updated Submit Data:', [...submitData, isAnswerCorrect]);
+    };
+
 
 
     return (

@@ -18,8 +18,9 @@ const QuizComp = () => {
         }
     };
 
-    const handleQuizCompleted = async() => {
+    const handleQuizCompleted = async () => {
         // Calculate total correct answers
+        console.log('Submit Data:', submitData);
         const totalCorrectQuestions = submitData.filter(Boolean).length;
 
         alert('Quiz Completed');
@@ -32,14 +33,21 @@ const QuizComp = () => {
         alert('Quiz Completed');
     };
 
-    const handleSubmit = async(option) => {
+    const handleSubmit = async (option) => {
         const isQuizCompleted = QuizData.quizData.length - 1 === submit.length;
 
         if (isQuizCompleted) {
-            setSubmit([...submitData, option]);
+            // Update submit state
+            setSubmit((prevSubmit) => [...prevSubmit, option]);
+
+            // Update submitData state
+            setSubmitData((prevSubmitData) => [...prevSubmitData, option]);
+
+            // Handle quiz completion
             await handleQuizCompleted();
             return;
         }
+
 
         // Handle the next question
         const nextQuestionIndex = submit.length + 1;

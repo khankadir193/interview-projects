@@ -62,10 +62,10 @@ function App() {
         <DynamicChild></DynamicChild>
       </DynamicParent> */}
       {/* <GameComp /> */}
-      {/* <QuizComp /> */}
+      <QuizComp />
       {/* <FilpCoin /> */}
       {/* <LocFinderApp /> */}
-      <PaintComp />
+      {/* <PaintComp /> */}
 
       {/* routing using react router */}
       {/* <Router>

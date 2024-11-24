@@ -1,25 +1,29 @@
-import React,{useState} from 'react';
+import React, { useState } from 'react';
 import './QuizApp.css';
 
-const QuizQuestions = ({ item, onSubmit}) => {
+const QuizQuestions = ({ item, onSubmit }) => {
     const [selectedOption, setSelectedOption] = useState('');
 
     const handleRadioChange = (e) => {
-        console.log('handleRadioChange..',e.target);
+        console.log('handleRadioChange..', e.target);
         setSelectedOption(e.target.value);
     };
 
-    const handleClick = (event) => {
-        if(selectedOption){
+    const handleClick = () => {
+        console.log('Submit button clicked...');
+        if (!selectedOption) {
+            alert('Please select an option before submitting!');
+        } else {
             onSubmit(selectedOption);
-        }else{
-            alert('Please select option....?');
         }
-        // console.log('selected option....', setSelectedOption);
+    };
+
+    const handleAlert = (option) => {
+        alert(`You selected: ${option}`);
     };
 
     return (
-        <div className='list-question'>
+        <div className="list-question">
             <ul>
                 <li>{item.question}</li>
                 {item.options.map((option, ind) => {
@@ -31,7 +35,10 @@ const QuizQuestions = ({ item, onSubmit}) => {
                                     name="options"
                                     value={option}
                                     checked={selectedOption === option}
-                                    onChange={handleRadioChange}
+                                    onChange={(e) => {
+                                        handleRadioChange(e);
+                                        // handleAlert(option); // Trigger alert when the option is clicked
+                                    }}
                                 />
                                 {option}
                             </label>
@@ -41,7 +48,7 @@ const QuizQuestions = ({ item, onSubmit}) => {
             </ul>
             <button onClick={handleClick}>Submit</button>
         </div>
-    )
-}
-    ;
+    );
+};
+
 export default QuizQuestions;

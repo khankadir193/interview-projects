@@ -23,7 +23,7 @@ const QuizComp = () => {
         console.log('Submit Data:', submitData);
         const totalCorrectQuestions = submitData.filter(Boolean).length;
 
-        alert('Quiz Completed');
+        // alert('Quiz Completed');
         setRightQues(totalCorrectQuestions); // Update the state for correct questions
         setQuizData([QuizData.quizData[0]]); // Reset to the first question
         setSubmit([]); // Reset submitted answers
@@ -35,13 +35,15 @@ const QuizComp = () => {
 
     const handleSubmit = async (option) => {
         const isQuizCompleted = QuizData.quizData.length - 1 === submit.length;
+        console.log("isQuizCompleted", isQuizCompleted);
 
         if (isQuizCompleted) {
+            const isAnswerCorrect = questionEvaluate(option); // Evaluate the submitted answer
             // Update submit state
             setSubmit((prevSubmit) => [...prevSubmit, option]);
 
             // Update submitData state
-            setSubmitData((prevSubmitData) => [...prevSubmitData, option]);
+            setSubmitData((prevSubmitData) => [...prevSubmitData, isAnswerCorrect]);
 
             // Handle quiz completion
             await handleQuizCompleted();

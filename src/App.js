@@ -27,6 +27,7 @@ import BlogComp from './BlogApp/BlogComp';
 import ContactComp from './BlogApp/ContactComp';
 import MemoryGameComp from './MemoryGame/MemoryGameComp';
 import MemoryGameComp2 from './MemoryGame/MemoryGameComp2';
+import PaginationComp from './Pagination/PaginationComp';
 
 
 /**
@@ -62,7 +63,7 @@ function App() {
         <DynamicChild></DynamicChild>
       </DynamicParent> */}
       {/* <GameComp /> */}
-      <QuizComp />
+      {/* <QuizComp /> */}
       {/* <FilpCoin /> */}
       {/* <LocFinderApp /> */}
       {/* <PaintComp /> */}
@@ -79,6 +80,7 @@ function App() {
       </Router> */}
       {/* memory game component */}
       {/* <MemoryGameComp2 /> */}
+      <PaginationComp />
     </div>
   );
 }

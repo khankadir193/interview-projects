@@ -1,8 +1,16 @@
-.card {
-    width: 300px;
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    /* max-width: 800px; */
+    /* margin: 0 auto; */
+    padding: 20px;
+}
+.card-container .card {
+    width: 250px;
     margin: 20px;
     padding: 15px;
-    background: #ffffff;
+    /* background: #ffffff; */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     text-align: center;

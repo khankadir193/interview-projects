@@ -24,7 +24,7 @@ const PaginationComp = () => {
   }, [0]);
 
   return (
-    <div>
+    <div className='card-container'>
       {
         data?.map((item)=>{
           return (<>

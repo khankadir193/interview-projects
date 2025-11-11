@@ -1,0 +1,34 @@
+.stack-main-container{
+    display: flex;
+}
+
+.push-pop-container{
+    display: flex;
+    justify-content: space-around;
+    gap: 3vw;
+}
+
+.push-pop-container button{
+    background: purple;
+    outline: none;
+    border: 3px solid green;
+    border-radius: 4vw;
+    width: 50%;
+    height: 4vh;
+    color: red;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
+.push-pop-container input{
+    /* width: 70%; */
+    height: 4vh;
+    border: 2px dotted black;
+    border-radius: 3vw;
+}
+
+.stack-element-container{
+    display: flex;
+    justify-content: space-around;
+    gap: 3vw;
+}

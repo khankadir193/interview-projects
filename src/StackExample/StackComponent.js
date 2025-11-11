@@ -1,4 +1,5 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+import './stack.css';
 
 const StackComponent = () => {
     const [stackElement, setStackElement] = useState([]);
@@ -30,15 +31,18 @@ const StackComponent = () => {
 
 
     return (
-        <div>
-            <h2>Stack (Push/Pop)</h2>
-            <button onClick={stackPush}>Push</button>
-            <button onClick={stackPop}>Pop</button>
-            <input
-                onChange={handleInputValue}
-            />
+        <div className='stack-main-container'>
+            <div className='push-pop-container'>
+                <h2>Stack (Push/Pop)</h2>
+                <button onClick={stackPush}>Push</button>
+                <button onClick={stackPop}>Pop</button>
+                <input
+                    onChange={handleInputValue}
+                    placeholder='please enter your text'
+                />
+            </div>
 
-            <div>
+            <div className='stack-element-container'>
                 <h3>Stack Elements</h3>
                 {
                     stackElement.length === 0 ? (

@@ -28,6 +28,7 @@ import ContactComp from './BlogApp/ContactComp';
 import MemoryGameComp from './MemoryGame/MemoryGameComp';
 import MemoryGameComp2 from './MemoryGame/MemoryGameComp2';
 import PaginationComp from './Pagination/PaginationComp';
+import StackComponent from './StackExample/StackComponent';
 
 
 /**
@@ -80,7 +81,8 @@ function App() {
       </Router> */}
       {/* memory game component */}
       {/* <MemoryGameComp2 /> */}
-      <PaginationComp />
+      {/* <PaginationComp /> */}
+      <StackComponent />
     </div>
   );
 }

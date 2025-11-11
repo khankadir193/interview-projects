@@ -1,11 +1,15 @@
 .stack-main-container{
     display: flex;
+    width: 100%;
+    justify-content: center;
 }
 
 .push-pop-container{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     gap: 3vw;
+    flex-direction: column;
+    text-align: center;
 }
 
 .push-pop-container button{
@@ -31,4 +35,5 @@
     display: flex;
     justify-content: space-around;
     gap: 3vw;
+    margin-top: 17rem;
 }

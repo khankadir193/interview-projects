@@ -13,6 +13,7 @@ const StackComponent = () => {
         }
 
         setStackElement([...stackElement, inputValue]);
+        setInputValue('');
     };
 
     const stackPop = () => {
@@ -34,29 +35,35 @@ const StackComponent = () => {
         <div className='stack-main-container'>
             <div className='push-pop-container'>
                 <h2>Stack (Push/Pop)</h2>
-                <button onClick={stackPush}>Push</button>
-                <button onClick={stackPop}>Pop</button>
+                <div style={{ display: 'flex', justifyContent: 'space-between', gap: '2rem' }}>
+                    <button onClick={stackPush}>Push</button>
+                    <button onClick={stackPop}>Pop</button>
+                </div>
                 <input
                     onChange={handleInputValue}
                     placeholder='please enter your text'
+                    value={inputValue}
                 />
             </div>
 
             <div className='stack-element-container'>
                 <h3>Stack Elements</h3>
-                {
-                    stackElement.length === 0 ? (
-                        <p>Stack is empty</p>
-                    ) : (
-                        <ul>
-                            {
-                                stackElement.slice(0).reverse().map((item, index) => {
-                                    <li key={index}>{item}</li>
-                                })
-                            }
-                        </ul>
-                    )
-                }
+                <div style={{display:'flex',flexDirection:'column'}}>
+                    {
+                        stackElement.length === 0 ? (
+                            <p>Stack is empty</p>
+                        ) : (
+                            <ul>
+                                {
+                                    stackElement.slice(0).reverse().map((item, index) => {
+                                        <li key={index}>{item}</li>
+                                    })
+                                }
+                            </ul>
+                        )
+                    }
+                </div>
+
             </div>
         </div>
     )

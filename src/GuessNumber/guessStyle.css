@@ -1,0 +1,13 @@
+.guess-container{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
+    align-items: center;
+}
+
+.guess-container input{
+    width: 30%;
+    border: 4px dotted black;
+}

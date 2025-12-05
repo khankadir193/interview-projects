@@ -29,6 +29,7 @@ import MemoryGameComp from './MemoryGame/MemoryGameComp';
 import MemoryGameComp2 from './MemoryGame/MemoryGameComp2';
 import PaginationComp from './Pagination/PaginationComp';
 import StackComponent from './StackExample/StackComponent';
+import GuessComponent from './GuessNumber/GuessComponent';
 
 
 /**
@@ -82,7 +83,8 @@ function App() {
       {/* memory game component */}
       {/* <MemoryGameComp2 /> */}
       {/* <PaginationComp /> */}
-      <StackComponent />
+      {/* <StackComponent /> */}
+      <GuessComponent />
     </div>
   );
 }

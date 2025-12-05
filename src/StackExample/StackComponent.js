@@ -46,24 +46,39 @@ const StackComponent = () => {
                 />
             </div>
 
-            <div className='stack-element-container'>
-                <h3>Stack Elements</h3>
-                <div style={{display:'flex',flexDirection:'column'}}>
-                    {
-                        stackElement.length === 0 ? (
-                            <p>Stack is empty</p>
-                        ) : (
-                            <ul>
-                                {
-                                    stackElement.slice(0).reverse().map((item, index) => {
-                                        <li key={index}>{item}</li>
-                                    })
-                                }
-                            </ul>
-                        )
-                    }
-                </div>
-
+            <div
+                style={{
+                    display: 'flex',
+                    flexDirection: 'column',
+                    alignItems: 'center',
+                    marginTop: '10px',
+                }}
+            >
+                {stackElement.length === 0 ? (
+                    <p>Stack is empty</p>
+                ) : (
+                    <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                        {stackElement
+                            .slice(0)
+                            .reverse()
+                            .map((item, index) => (
+                                <li
+                                    key={index}
+                                    style={{
+                                        backgroundColor: '#e3f2fd',
+                                        margin: '5px 0',
+                                        padding: '8px 15px',
+                                        borderRadius: '6px',
+                                        width: '150px',
+                                        textAlign: 'center',
+                                        boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
+                                    }}
+                                >
+                                    {item}
+                                </li>
+                            ))}
+                    </ul>
+                )}
             </div>
         </div>
     )

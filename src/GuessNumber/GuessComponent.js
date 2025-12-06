@@ -4,34 +4,37 @@ import './guessStyle.css';
 // https://namastedev.com/practice/guess-the-number
 
 const GuessComponent = () => {
-    const [nums,setNums] = useState(0);
-    const [isFlag , setIsFlag] = useState(false);
-    const [randomValue] = useState(Math.floor(Math.random() * 100));
+    const [nums, setNums] = useState(0);
+    const [isFlag, setIsFlag] = useState(false);
+    const [randomValue,setRandomValue] = useState(Math.floor(Math.random() * 100));
+    const [counter, setCounter] = useState(0);
 
     const handleChange = (e) => {
         setNums(e.target.value);
     };
 
     const handleGuess = () => {
-        // console.log('Maht randome values...',Math.floor(Math.random() * 100));
-        console.log('randValueFromHooks',randomValue);
-        console.log('numsValue...',nums);
-        if(nums < 100 && nums > 0){
-            console.log('this value is true..');
-            if(Number(nums) === Number(randomValue)){
-                console.log('this value is also is true...');
-                alert('data has been matched..');
+        console.log('randValueFromHooks', randomValue);
+        if (nums < 100 && nums > 0) {
+            if (Number(nums) === Number(randomValue)) {
+                // alert('data has been matched..');
                 setIsFlag(true);
-            }else{
+                setCounter((prev) => prev + 1)
+            } else {
                 setIsFlag(false);
+                setCounter((prev) => prev + 1)
             }
-        }else{
+        } else {
             setIsFlag(false)
+            setCounter((prev) => prev + 1);
         }
     };
 
     const handleReset = () => {
-
+        setCounter(0);
+        setRandomValue(Math.floor(Math.random() * 100));
+        setNums(0);
+        setIsFlag(false);
     };
 
     return (
@@ -43,7 +46,10 @@ const GuessComponent = () => {
                 <button onClick={handleReset}>ResetGame</button>
             </div>
             {
-                isFlag ? <p>Value is too high</p> : <p>value is not matched</p>
+                isFlag ?
+                    <p>Congratulations You have been matched {counter} attempts.</p>
+                    :
+                    <p>value is not matched</p>
             }
         </div>
     )

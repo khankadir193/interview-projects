@@ -1,0 +1,27 @@
+.dynamic-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw;
+    padding-right: 3vw;
+    padding-left: 3vw;
+}
+
+.dynamic-container select{
+    width: 40%;
+    height: 5vh;
+    border-radius: 3vw;
+}
+
+.child-a{
+    color: blue;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.child-b{
+    color: purple;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+}

@@ -27,7 +27,9 @@ const GuessComponent = () => {
         } else {
             setIsFlag(false)
             setCounter((prev) => prev + 1);
-        }
+        };
+
+        // console.log('this code has been prompted show we need to ')
     };
 
     const handleReset = () => {

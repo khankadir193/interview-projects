@@ -31,6 +31,7 @@ import PaginationComp from './Pagination/PaginationComp';
 import StackComponent from './StackExample/StackComponent';
 import GuessComponent from './GuessNumber/GuessComponent';
 import ParentInterviewComp from './DynamicCompInterview/ParentInterviewComp';
+import InfinitScrollingComp from './InfinitScrolling/InfinitScrollingComp';
 
 
 /**
@@ -86,7 +87,8 @@ function App() {
       {/* <PaginationComp /> */}
       {/* <StackComponent /> */}
       {/* <GuessComponent /> */}
-      <ParentInterviewComp />
+      {/* <ParentInterviewComp /> */}
+      <InfinitScrollingComp />
     </div>
   );
 }

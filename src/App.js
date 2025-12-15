@@ -32,6 +32,7 @@ import StackComponent from './StackExample/StackComponent';
 import GuessComponent from './GuessNumber/GuessComponent';
 import ParentInterviewComp from './DynamicCompInterview/ParentInterviewComp';
 import InfinitScrollingComp from './InfinitScrolling/InfinitScrollingComp';
+import InfiniteScrollDebounce from './InfinitScrolling/InfiniteScrollDebounce';
 
 
 /**
@@ -88,7 +89,8 @@ function App() {
       {/* <StackComponent /> */}
       {/* <GuessComponent /> */}
       {/* <ParentInterviewComp /> */}
-      <InfinitScrollingComp />
+      {/* <InfinitScrollingComp /> */}
+      <InfiniteScrollDebounce />
     </div>
   );
 }

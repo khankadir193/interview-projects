@@ -34,6 +34,7 @@ import ParentInterviewComp from './DynamicCompInterview/ParentInterviewComp';
 import InfinitScrollingComp from './InfinitScrolling/InfinitScrollingComp';
 import InfiniteScrollDebounce from './InfinitScrolling/InfiniteScrollDebounce';
 import SearchInterview from './SearchFilterInteview/SearchInterview';
+import ModalComponent from './ImportInterviewPractice/ModalExample/ModalComponent';
 
 
 /**
@@ -92,7 +93,8 @@ function App() {
       {/* <ParentInterviewComp /> */}
       {/* <InfinitScrollingComp /> */}
       {/* <InfiniteScrollDebounce /> */}
-      <SearchInterview />
+      {/* <SearchInterview /> */}
+      <ModalComponent />
     </div>
   );
 }

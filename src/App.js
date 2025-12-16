@@ -33,6 +33,7 @@ import GuessComponent from './GuessNumber/GuessComponent';
 import ParentInterviewComp from './DynamicCompInterview/ParentInterviewComp';
 import InfinitScrollingComp from './InfinitScrolling/InfinitScrollingComp';
 import InfiniteScrollDebounce from './InfinitScrolling/InfiniteScrollDebounce';
+import SearchInterview from './SearchFilterInteview/SearchInterview';
 
 
 /**
@@ -90,7 +91,8 @@ function App() {
       {/* <GuessComponent /> */}
       {/* <ParentInterviewComp /> */}
       {/* <InfinitScrollingComp /> */}
-      <InfiniteScrollDebounce />
+      {/* <InfiniteScrollDebounce /> */}
+      <SearchInterview />
     </div>
   );
 }

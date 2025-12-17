@@ -1,0 +1,34 @@
+/* *{
+    width: 100%;
+    height: 100vh;
+} */
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vw;
+    margin: 3rem;
+}
+
+.iEmail{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    height: 7vh;
+    border-radius: 3vw;
+    border: 2px solid purple;
+    text-align: center;
+}
+
+.btn-submit{
+    width: 30%;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4vw;
+    border: none;
+    background: blueviolet;
+}

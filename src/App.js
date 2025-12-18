@@ -39,6 +39,7 @@ import { AuthProvider } from './ImportInterviewPractice/AuthenticationExample/Au
 import Login from './ImportInterviewPractice/AuthenticationExample/Pages/Login';
 import ProtectedRoute from './ImportInterviewPractice/AuthenticationExample/Auth/ProtectedRoute';
 import Dashboard from './ImportInterviewPractice/AuthenticationExample/Pages/Dashboard';
+import ProductList from './ImportInterviewPractice/SearchFilterInterviewExample/ProductList';
 
 
 /**
@@ -101,7 +102,7 @@ function App() {
       {/* <ModalComponent /> */}
 
       {/* Authentication flow wrapping component alongwith context api */}
-      <AuthProvider>
+      {/* <AuthProvider>
         <BrowserRouter>
           <Routes>
             <Route path='/login' element={<Login />} />
@@ -111,7 +112,10 @@ function App() {
               </ProtectedRoute>} />
           </Routes>
         </BrowserRouter>
-      </AuthProvider>
+      </AuthProvider> */}
+      
+      {/* this approach for search filter and sort for interview */}
+      <ProductList />
     </div>
   );
 }

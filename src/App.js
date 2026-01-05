@@ -40,6 +40,7 @@ import Login from './ImportInterviewPractice/AuthenticationExample/Pages/Login';
 import ProtectedRoute from './ImportInterviewPractice/AuthenticationExample/Auth/ProtectedRoute';
 import Dashboard from './ImportInterviewPractice/AuthenticationExample/Pages/Dashboard';
 import ProductList from './ImportInterviewPractice/SearchFilterInterviewExample/ProductList';
+import DragDropList from './ImportInterviewPractice/DragDropExample/DragDropList';
 
 
 /**
@@ -115,7 +116,8 @@ function App() {
       </AuthProvider> */}
       
       {/* this approach for search filter and sort for interview */}
-      <ProductList />
+      {/* <ProductList /> */}
+      <DragDropList />
     </div>
   );
 }

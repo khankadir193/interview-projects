@@ -94,6 +94,7 @@ function App() {
       {/* memory game component */}
       {/* <MemoryGameComp2 /> */}
       {/* <PaginationComp /> */}
+      {/* <PaginationComp /> */}
       {/* <StackComponent /> */}
       {/* <GuessComponent /> */}
       {/* <ParentInterviewComp /> */}

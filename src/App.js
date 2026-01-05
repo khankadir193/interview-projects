@@ -41,6 +41,7 @@ import ProtectedRoute from './ImportInterviewPractice/AuthenticationExample/Auth
 import Dashboard from './ImportInterviewPractice/AuthenticationExample/Pages/Dashboard';
 import ProductList from './ImportInterviewPractice/SearchFilterInterviewExample/ProductList';
 import DragDropList from './ImportInterviewPractice/DragDropExample/DragDropList';
+import ScrollComp from './ImportInterviewPractice/CustomHookScroll/ScrollComp';
 
 
 /**
@@ -118,7 +119,8 @@ function App() {
       
       {/* this approach for search filter and sort for interview */}
       {/* <ProductList /> */}
-      <DragDropList />
+      {/* <DragDropList /> */}
+      <ScrollComp />
     </div>
   );
 }

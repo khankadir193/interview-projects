@@ -42,6 +42,7 @@ import Dashboard from './ImportInterviewPractice/AuthenticationExample/Pages/Das
 import ProductList from './ImportInterviewPractice/SearchFilterInterviewExample/ProductList';
 import DragDropList from './ImportInterviewPractice/DragDropExample/DragDropList';
 import ScrollComp from './ImportInterviewPractice/CustomHookScroll/ScrollComp';
+import DebounceComponent from './ImportInterviewPractice/DebounceExample/DebounceComponent';
 
 
 /**
@@ -120,7 +121,8 @@ function App() {
       {/* this approach for search filter and sort for interview */}
       {/* <ProductList /> */}
       {/* <DragDropList /> */}
-      <ScrollComp />
+      {/* <ScrollComp /> */}
+      <DebounceComponent />
     </div>
   );
 }

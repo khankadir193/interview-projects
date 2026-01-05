@@ -1,7 +1,7 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-import { BrowserRouter as Router, Routes, Route,Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, BrowserRouter } from 'react-router-dom';
 import AccordianComp from './Accordian/AccordianComp';
 import GitHubProfileFinder from './GitHubProfile/GitHubProfileFinder';
 import QrGenerator from './Qr-code-generator/QrGenerator';
@@ -28,6 +28,18 @@ import ContactComp from './BlogApp/ContactComp';
 import MemoryGameComp from './MemoryGame/MemoryGameComp';
 import MemoryGameComp2 from './MemoryGame/MemoryGameComp2';
 import PaginationComp from './Pagination/PaginationComp';
+import StackComponent from './StackExample/StackComponent';
+import GuessComponent from './GuessNumber/GuessComponent';
+import ParentInterviewComp from './DynamicCompInterview/ParentInterviewComp';
+import InfinitScrollingComp from './InfinitScrolling/InfinitScrollingComp';
+import InfiniteScrollDebounce from './InfinitScrolling/InfiniteScrollDebounce';
+import SearchInterview from './SearchFilterInteview/SearchInterview';
+import ModalComponent from './ImportInterviewPractice/ModalExample/ModalComponent';
+import { AuthProvider } from './ImportInterviewPractice/AuthenticationExample/Auth/AuthContext';
+import Login from './ImportInterviewPractice/AuthenticationExample/Pages/Login';
+import ProtectedRoute from './ImportInterviewPractice/AuthenticationExample/Auth/ProtectedRoute';
+import Dashboard from './ImportInterviewPractice/AuthenticationExample/Pages/Dashboard';
+import ProductList from './ImportInterviewPractice/SearchFilterInterviewExample/ProductList';
 
 
 /**
@@ -80,7 +92,31 @@ function App() {
       </Router> */}
       {/* memory game component */}
       {/* <MemoryGameComp2 /> */}
-      <PaginationComp />
+      {/* <PaginationComp /> */}
+      {/* <PaginationComp /> */}
+      {/* <StackComponent /> */}
+      {/* <GuessComponent /> */}
+      {/* <ParentInterviewComp /> */}
+      {/* <InfinitScrollingComp /> */}
+      {/* <InfiniteScrollDebounce /> */}
+      {/* <SearchInterview /> */}
+      {/* <ModalComponent /> */}
+
+      {/* Authentication flow wrapping component alongwith context api */}
+      {/* <AuthProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/login' element={<Login />} />
+            <Route path='/dashboard' element={
+              <ProtectedRoute>
+                <Dashboard />
+              </ProtectedRoute>} />
+          </Routes>
+        </BrowserRouter>
+      </AuthProvider> */}
+      
+      {/* this approach for search filter and sort for interview */}
+      <ProductList />
     </div>
   );
 }

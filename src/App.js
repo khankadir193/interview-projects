@@ -43,6 +43,7 @@ import ProductList from './ImportInterviewPractice/SearchFilterInterviewExample/
 import DragDropList from './ImportInterviewPractice/DragDropExample/DragDropList';
 import ScrollComp from './ImportInterviewPractice/CustomHookScroll/ScrollComp';
 import DebounceComponent from './ImportInterviewPractice/DebounceExample/DebounceComponent';
+import TimerComponent from './ImportInterviewPractice/CustomeCountDown/TimerComponent';
 
 
 /**
@@ -122,7 +123,9 @@ function App() {
       {/* <ProductList /> */}
       {/* <DragDropList /> */}
       {/* <ScrollComp /> */}
-      <DebounceComponent />
+      {/* <DebounceComponent /> */}
+      {/* <TimerComponent /> */}
+      <TodoList />
     </div>
   );
 }

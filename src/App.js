@@ -44,6 +44,8 @@ import DragDropList from './ImportInterviewPractice/DragDropExample/DragDropList
 import ScrollComp from './ImportInterviewPractice/CustomHookScroll/ScrollComp';
 import DebounceComponent from './ImportInterviewPractice/DebounceExample/DebounceComponent';
 import TimerComponent from './ImportInterviewPractice/CustomeCountDown/TimerComponent';
+import CrudApp from './TodoApp/CrudApp';
+import SearchComp from './ImportInterviewPractice/SearchBar/SearchComp';
 
 
 /**
@@ -125,7 +127,9 @@ function App() {
       {/* <ScrollComp /> */}
       {/* <DebounceComponent /> */}
       {/* <TimerComponent /> */}
-      <TodoList />
+      {/* <TodoList /> */}
+      {/* <CrudApp /> */}
+      <SearchComp />
     </div>
   );
 }

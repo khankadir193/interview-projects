@@ -27,4 +27,4 @@ const TanStackExample = () => {
     )
 }
 
-export default TanStackExample
+export default TanStackExample;

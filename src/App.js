@@ -46,6 +46,9 @@ import DebounceComponent from './ImportInterviewPractice/DebounceExample/Debounc
 import TimerComponent from './ImportInterviewPractice/CustomeCountDown/TimerComponent';
 import CrudApp from './TodoApp/CrudApp';
 import SearchComp from './ImportInterviewPractice/SearchBar/SearchComp';
+import CrudAppApi from './TodoApp/CrudAppApi';
+import Timeline from './ImportInterviewPractice/TimeLineStatus/TimeStatus';
+import TanStackExample from './ImportInterviewPractice/ReactQueryExample/TanStackExample';
 
 
 /**
@@ -120,7 +123,7 @@ function App() {
           </Routes>
         </BrowserRouter>
       </AuthProvider> */}
-      
+
       {/* this approach for search filter and sort for interview */}
       {/* <ProductList /> */}
       {/* <DragDropList /> */}
@@ -129,7 +132,10 @@ function App() {
       {/* <TimerComponent /> */}
       {/* <TodoList /> */}
       {/* <CrudApp /> */}
-      <SearchComp />
+      {/* <SearchComp /> */}
+      {/* <CrudAppApi /> */}
+      {/* <Timeline /> */}
+      <TanStackExample />
     </div>
   );
 }

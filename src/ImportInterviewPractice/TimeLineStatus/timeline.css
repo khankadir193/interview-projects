@@ -1,0 +1,66 @@
+.timeline-container {
+  width: 400px;
+  margin: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 16px;
+  position: relative;
+}
+
+.timeline-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+}
+
+.completed {
+  background-color: #2ecc71;
+  color: white;
+}
+
+.current {
+  background-color: #f5b041;
+  color: white;
+}
+
+.pending {
+  background-color: #d5d8dc;
+}
+
+.line {
+  width: 2px;
+  height: 40px;
+  background-color: #d5d8dc;
+}
+
+.line-active {
+  background-color: #2ecc71;
+}
+
+.timeline-content h4 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.time {
+  font-size: 13px;
+  color: #6c757d;
+}
+
+.desc {
+  font-size: 14px;
+  color: #6c757d;
+}

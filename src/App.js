@@ -50,6 +50,7 @@ import CrudAppApi from './TodoApp/CrudAppApi';
 import Timeline from './ImportInterviewPractice/TimeLineStatus/TimeStatus';
 import TanStackExample from './ImportInterviewPractice/ReactQueryExample/TanStackExample';
 import ThrottleComponent from './ImportInterviewPractice/ThrottleExample/ThrottleComponent';
+import TimeComp from './ImportInterviewPractice/DigitalTime/TimeComponent';
 
 
 /**
@@ -137,7 +138,8 @@ function App() {
       {/* <CrudAppApi /> */}
       {/* <Timeline /> */}
       {/* <TanStackExample /> */}
-      <ThrottleComponent />
+      {/* <ThrottleComponent /> */}
+      <TimeComp />
     </div>
   );
 }

@@ -51,6 +51,9 @@ import Timeline from './ImportInterviewPractice/TimeLineStatus/TimeStatus';
 import TanStackExample from './ImportInterviewPractice/ReactQueryExample/TanStackExample';
 import ThrottleComponent from './ImportInterviewPractice/ThrottleExample/ThrottleComponent';
 import TimeComp from './ImportInterviewPractice/DigitalTime/TimeComponent';
+import { CounterComp } from './ImportInterviewPractice/ReduxToolkit/CounterExample';
+import { Provider } from 'react-redux';
+import { store } from './ImportInterviewPractice/ReduxToolkit/Store/store';
 
 
 /**
@@ -139,7 +142,12 @@ function App() {
       {/* <Timeline /> */}
       {/* <TanStackExample /> */}
       {/* <ThrottleComponent /> */}
-      <TimeComp />
+      {/* <TimeComp /> */}
+
+      {/* this counter code based by the reduxtoolkit */}
+      <Provider store={store}>
+        <CounterComp />
+      </Provider>
     </div>
   );
 }

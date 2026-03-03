@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { fetchPost } from "./fetchData";
 
 const counterSlice = createSlice({
   name: 'counter',
@@ -16,7 +17,7 @@ const counterSlice = createSlice({
       console.log('action',action)
       state.value += Number(action.payload);
     }
-  }
+  } 
 });
 
 export const { increment, decrement, incrementByAmount } = counterSlice.actions;

@@ -55,6 +55,7 @@ import { CounterComp } from './ImportInterviewPractice/ReduxToolkit/CounterExamp
 import { Provider } from 'react-redux';
 import { store } from './ImportInterviewPractice/ReduxToolkit/Store/store';
 import PostsExample from './ImportInterviewPractice/ReduxToolkit/PostsExample';
+import FromComponenet from './ImportInterviewPractice/FormExample/FormComponent';
 
 
 /**
@@ -146,10 +147,12 @@ function App() {
       {/* <TimeComp /> */}
 
       {/* this counter code based by the reduxtoolkit */}
-      <Provider store={store}>
-        {/* <CounterComp /> */}
+      {/* <Provider store={store}> 
         <PostsExample />
-      </Provider>
+      </Provider> */}
+
+      {/* form component */}
+      <FromComponenet />
     </div>
   );
 }

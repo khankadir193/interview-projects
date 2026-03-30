@@ -56,6 +56,7 @@ import { Provider } from 'react-redux';
 import { store } from './ImportInterviewPractice/ReduxToolkit/Store/store';
 import PostsExample from './ImportInterviewPractice/ReduxToolkit/PostsExample';
 import FromComponenet from './ImportInterviewPractice/FormExample/FormComponent';
+import FormWithApi from './ImportInterviewPractice/FormExample/FormWithApi';
 
 
 /**
@@ -152,7 +153,8 @@ function App() {
       </Provider> */}
 
       {/* form component */}
-      <FromComponenet />
+      {/* <FromComponenet /> */}
+      <FormWithApi />
     </div>
   );
 }

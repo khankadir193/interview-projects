@@ -1,9 +1,11 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 
-const FromComponenet = () => {
-    const [formData, setFormData] = useState({ username: '', password: '' });
+const FormComponent = () => {
+    const initialState = { username: '', password: '' };
+    const [formData, setFormData] = useState(initialState);
     const [file, setFile] = useState(null);
     const [errors, setErrors] = useState({});
+    const fileInputRef = useRef(null);
 
     const validate = () => {
         const newErrors = {};
@@ -82,11 +84,12 @@ const FromComponenet = () => {
         console.log('File:', file);
 
         // Optionally clear form after submit
-        setFormData({ username: '', password: '' });
+        setFormData(initialState);
         setFile(null);
         setErrors({});
-
-        // If file input needs reset, we can also use ref (not required here)
+        if (fileInputRef.current) {
+            fileInputRef.current.value = '';
+        }
     };
 
     const containerStyle = {
@@ -127,13 +130,14 @@ const FromComponenet = () => {
         <div style={{ minHeight: '80vh', background: '#f7fafc', padding: 10, boxSizing: 'border-box' }}>
             <div style={containerStyle}>
                 <h1 style={{ fontSize: '1.6rem', textAlign: 'center', marginBottom: 16, color: '#1a202c' }}>User Login</h1>
-                <form onSubmit={handleSubmit} noValidate>
+                <form onSubmit={handleSubmit} noValidate autoComplete="off">
                 <div style={{ marginBottom: 16 }}>
                     <label htmlFor="username" style={labelStyle}>Username</label>
                     <input
                         id="username"
                         name="username"
                         type="text"
+                        autoComplete="off"
                         placeholder="Enter username"
                         value={formData.username}
                         onChange={handleChange}
@@ -150,6 +154,7 @@ const FromComponenet = () => {
                         id="password"
                         name="password"
                         type="password"
+                        autoComplete="off"
                         placeholder="Enter password (min 6 chars)"
                         value={formData.password}
                         onChange={handleChange}
@@ -163,6 +168,7 @@ const FromComponenet = () => {
                 <div style={{ marginBottom: 16 }}>
                     <label htmlFor="fileUpload" style={labelStyle}>Upload File</label>
                     <input
+                        ref={fileInputRef}
                         id="fileUpload"
                         name="fileUpload"
                         type="file"
@@ -184,4 +190,4 @@ const FromComponenet = () => {
     );
 };
 
-export default FromComponenet;
+export default FormComponent;

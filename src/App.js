@@ -57,6 +57,7 @@ import { store } from './ImportInterviewPractice/ReduxToolkit/Store/store';
 import PostsExample from './ImportInterviewPractice/ReduxToolkit/PostsExample';
 import FromComponenet from './ImportInterviewPractice/FormExample/FormComponent';
 import FormWithApi from './ImportInterviewPractice/FormExample/FormWithApi';
+import TabbedComponent from './TabbedComponent';
 
 
 /**
@@ -154,7 +155,8 @@ function App() {
 
       {/* form component */}
       {/* <FromComponenet /> */}
-      <FormWithApi />
+      {/* <FormWithApi /> */}
+      <TabbedComponent />
     </div>
   );
 }

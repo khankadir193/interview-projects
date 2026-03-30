@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import CardComp from './Pagination/CardComp';
 import ButtonTab from './Pagination/ButtonTab';
 import './TabbedComponent.css';
 
@@ -69,21 +68,74 @@ const TabbedComponent = () => {
           </div>
         );
       case 2:
+        // Hardcoded user data for Tab 2
+        const hardcodedUsers = [
+          { id: 1, name: 'John Doe', email: 'john@example.com', role: 'Developer', status: 'Active' },
+          { id: 2, name: 'Jane Smith', email: 'jane@example.com', role: 'Designer', status: 'Active' },
+          { id: 3, name: 'Bob Johnson', email: 'bob@example.com', role: 'Manager', status: 'Inactive' },
+          { id: 4, name: 'Alice Brown', email: 'alice@example.com', role: 'Developer', status: 'Active' },
+          { id: 5, name: 'Charlie Wilson', email: 'charlie@example.com', role: 'Analyst', status: 'Active' },
+          { id: 6, name: 'Diana Davis', email: 'diana@example.com', role: 'Designer', status: 'Active' },
+          { id: 7, name: 'Edward Miller', email: 'edward@example.com', role: 'Developer', status: 'Inactive' },
+          { id: 8, name: 'Fiona Garcia', email: 'fiona@example.com', role: 'Manager', status: 'Active' },
+          { id: 9, name: 'George Lee', email: 'george@example.com', role: 'Analyst', status: 'Active' },
+          { id: 10, name: 'Helen Taylor', email: 'helen@example.com', role: 'Developer', status: 'Active' },
+          { id: 11, name: 'Ian Anderson', email: 'ian@example.com', role: 'Designer', status: 'Active' },
+          { id: 12, name: 'Julia Martinez', email: 'julia@example.com', role: 'Manager', status: 'Inactive' },
+          { id: 13, name: 'Kevin White', email: 'kevin@example.com', role: 'Developer', status: 'Active' },
+          { id: 14, name: 'Laura Thompson', email: 'laura@example.com', role: 'Analyst', status: 'Active' },
+          { id: 15, name: 'Michael Rodriguez', email: 'michael@example.com', role: 'Designer', status: 'Active' }
+        ];
+
+        const totalUsers = hardcodedUsers.length;
+        const usersPerPage = 5;
+        const totalUserPages = Math.ceil(totalUsers / usersPerPage);
+        const startUserIndex = (currentPage - 1) * usersPerPage;
+        const endUserIndex = startUserIndex + usersPerPage;
+        const paginatedUsers = hardcodedUsers.slice(startUserIndex, endUserIndex);
+
         return (
           <div className="tab-content">
-            <h2>Tab 2 - User Profiles ({currentData.length} users)</h2>
-            <div className="card-container">
-              {paginatedData.map((item) => (
-                <CardComp
-                  key={item.id}
-                  login={item.login}
-                  avatar_url={item.avatar_url}
-                  profileUrl={item.html_url}
-                />
-              ))}
+            <h2>Tab 2 - User Management ({totalUsers} users)</h2>
+            <div className="users-table-container">
+              <table className="users-table">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {paginatedUsers.map((user) => (
+                    <tr key={user.id}>
+                      <td>{user.id}</td>
+                      <td>{user.name}</td>
+                      <td>{user.email}</td>
+                      <td>
+                        <span className={`role-badge ${user.role.toLowerCase()}`}>
+                          {user.role}
+                        </span>
+                      </td>
+                      <td>
+                        <span className={`status-badge ${user.status.toLowerCase()}`}>
+                          {user.status}
+                        </span>
+                      </td>
+                      <td>
+                        <button className="action-btn edit-btn">Edit</button>
+                        <button className="action-btn delete-btn">Delete</button>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
             <ButtonTab
-              totalPages={totalPages}
+              totalPages={totalUserPages}
               currentPage={currentPage}
               onPageChange={handlePageChange}
             />

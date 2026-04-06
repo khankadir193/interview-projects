@@ -1,0 +1,42 @@
+.employees-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.employees-container h2 {
+  color: #333;
+  text-align: center;
+}
+
+.table th {
+  font-weight: 600;
+  border-top: none;
+}
+
+.table-hover tbody tr:hover {
+  background-color: rgba(0, 123, 255, 0.1);
+}
+
+.badge {
+  font-size: 0.8em;
+}
+
+.pagination .page-link {
+  color: #007bff;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+@media (max-width: 768px) {
+  .employees-container {
+    padding: 10px;
+  }
+  
+  .table-responsive {
+    font-size: 0.9em;
+  }
+}

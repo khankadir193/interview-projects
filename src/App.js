@@ -58,6 +58,8 @@ import PostsExample from './ImportInterviewPractice/ReduxToolkit/PostsExample';
 import FromComponenet from './ImportInterviewPractice/FormExample/FormComponent';
 import FormWithApi from './ImportInterviewPractice/FormExample/FormWithApi';
 import TabbedComponent from './TabbedComponent';
+import EmployeesList from './Employees/EmployeesList';
+
 
 
 /**
@@ -156,7 +158,12 @@ function App() {
       {/* form component */}
       {/* <FromComponenet /> */}
       {/* <FormWithApi /> */}
-      <TabbedComponent />
+      {/* <TabbedComponent /> */}
+      
+      {/* Employees 50K data generation component */}
+      <EmployeesList />
+
+      
     </div>
   );
 }
